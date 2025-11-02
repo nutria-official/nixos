@@ -59,6 +59,7 @@
     };
     hyprpaper = {
       enable = true;
+      settings = import ../../modules/home-manager/environment/hypr/hyprpaper.nix;
     };
     hyprsunset = {
       enable = true;
