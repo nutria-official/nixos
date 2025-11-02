@@ -47,7 +47,7 @@
     };
     options = {
       tabstop = 2;
-      shiftwidth = 2;
+      shiftwidth = 0;
       signcolumn = "yes";
       wrap = false;
     };
