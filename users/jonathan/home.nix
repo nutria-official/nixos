@@ -89,6 +89,7 @@
     };
     hyprshot = {
       enable = true;
+      saveLocation = "$HOME/Pictures/screenshots/";
     };
     nvf = {
       enable = true;
