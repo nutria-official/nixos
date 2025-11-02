@@ -1,0 +1,61 @@
+* {
+	font-family: Comic Mono, Symbols Nerd Font Mono;
+	font-size: 16px;
+}
+
+window#waybar {
+	background: transparent; /*rgba(21, 22, 30, 0.9);*/
+	border: transparent; /*2px solid #7DCFFF;*/
+	border-radius: 40px;
+}
+
+#clock {
+	background-color: #BB9AF7;
+	border: 2px solid #7DCFFF;
+	padding: 5 5 0 5px;
+	border-radius: 40px;
+}
+
+#battery {
+	background-color: #E0AF68;
+	border: 2px solid #7DCFFF;
+	padding: 5 5 0 5px;
+	border-radius: 40px;
+  margin-right: 10px;
+}
+#battery.plugged {
+	background-color: #9ECE6A;
+}
+#battery.warning:not(.charging) {
+	background-color: #F18E6F;
+}
+#battery.critical:not(.charging) {
+	background-color: #F7768E;
+}
+
+
+#workspaces {
+	background-color: #414868;
+	border: 2px solid #7DCFFF;
+	border-radius: 40px;
+}
+
+#pulseaudio {
+	background-color: #7AA2F7;
+	border: 2px solid #7DCFFF;
+	padding: 5 5 0 5px;
+	border-radius: 40px;
+}
+
+#pulseaudio.muted {
+	background-color: #C25457;
+	padding: 0 5 0 5px;
+}
+
+#custom-spider {
+	background-color: #F18E6F;
+	border: 2px solid #7DCFFF;
+	padding: 0 15 0 15px;
+	border-radius: 40px;
+  margin-left: 10px;
+}
