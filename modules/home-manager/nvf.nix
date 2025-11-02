@@ -41,6 +41,9 @@
     lsp = {
       enable = true;
       formatOnSave = true;
+      inlayHints = {
+        enable = true;
+      };
     };
     options = {
       tabstop = 2;
