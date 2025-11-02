@@ -10,7 +10,6 @@
 
 {
   imports = [
-    #./modules/nvf.nix
     ../../secrets/sops.nix
   ];
 
@@ -56,7 +55,7 @@
   services = {
     hypridle = {
       enable = true;
-      settings = import ./modules/enviornment/hypr/hypridle.nix;
+      settings = import ../../modules/home-manager/environment/hypr/hypridle.nix;
     };
     hyprpaper = {
       enable = true;
@@ -85,19 +84,19 @@
     };
     hyprlock = {
       enable = true;
-      settings = import ./modules/enviornment/hypr/hyprlock.nix;
+      settings = import ../../modules/home-manager/environment/hypr/hyprlock.nix;
     };
     hyprshot = {
       enable = true;
     };
     nvf = {
       enable = true;
-      settings = import ./modules/nvf.nix;
+      settings = import ../../modules/home-manager/nvf.nix;
     };
     waybar = {
       enable = true;
-      settings = import ./modules/enviornment/waybar/config.nix;
-      style = ./modules/enviornment/waybar/style.css;
+      settings = import ../../modules/home-manager/environment/waybar/config.nix;
+      style = ../../modules/home-manager/environment/waybar/style.css;
     };
 
     wofi = {
