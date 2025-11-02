@@ -90,6 +90,10 @@
     hyprshot = {
       enable = true;
     };
+    nvf = {
+      enable = true;
+      settings = import ./modules/nvf.nix;
+    };
     waybar = {
       enable = true;
       settings = import ./modules/enviornment/waybar/config.nix;

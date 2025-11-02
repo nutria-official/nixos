@@ -10,7 +10,6 @@
   imports = [
     ./boot.nix
     ./systemSettings.nix
-    ../../users/jonathan/modules/nvf.nix
   ];
 
   users.users = {
