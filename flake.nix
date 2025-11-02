@@ -29,16 +29,17 @@
     }:
     let
       system = "x86_64-linux";
-      nixos_system = nixpkgs.lib.nixosSystem;
-      shared_modules = [
+      nixosSystem = nixpkgs.lib.nixosSystem;
+      sharedModules = [
         ./hosts/shared/configuration.nix
         home-manager.nixosModules.home-manager
         nvf.nixosModules.default
         sops-nix.nixosModules.sops
         {
           home-manager = {
-            shared_modules = [
+            sharedModules = [
               sops-nix.homeManagerModules.sops
+              nvf.homeManagerModules.default
             ];
             useGlobalPkgs = true;
             useUserPackages = true;
@@ -48,32 +49,32 @@
           };
         }
       ];
-      shared_desktop_modules = [
-        ./hosts/shared_desktop/configuration.nix
+      sharedDesktopModules = [
+        ./hosts/sharedDesktop/configuration.nix
       ];
     in
     {
       nixosConfigurations = {
-        laptop = nixos_system {
+        laptop = nixosSystem {
           inherit system;
-          modules = shared_modules ++ [
+          modules = sharedModules ++ [
             ./hosts/laptop/configuration.nix
           ];
         };
-        desktop-mom = nixos_system {
+        desktop-mom = nixosSystem {
           inherit system;
           modules =
-            shared_modules
-            ++ shared_desktop_modules
+            sharedModules
+            ++ sharedDesktopModules
             ++ [
               ./hosts/desktop-mom/configuration.nix
             ];
         };
-        desktop-dad = nixos_system {
+        desktop-dad = nixosSystem {
           inherit system;
           modules =
-            shared_modules
-            ++ shared_desktop_modules
+            sharedModules
+            ++ sharedDesktopModules
             ++ [
               ./hosts/desktop-dad/configuration.nix
             ];
