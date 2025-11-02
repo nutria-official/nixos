@@ -44,6 +44,9 @@
       inlayHints = {
         enable = true;
       };
+      lspSignature = {
+        enable = true;
+      };
     };
     options = {
       tabstop = 2;
