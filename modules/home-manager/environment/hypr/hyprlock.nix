@@ -18,7 +18,7 @@ in
     check_color = "rgba(222436FF)";
 
     font_color = "rgba(C0CAf5FF)";
-    fade_on_emty = false;
+    fade_on_empty = false;
     rounding = 15;
 
     font_family = font;
