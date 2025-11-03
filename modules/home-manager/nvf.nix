@@ -13,6 +13,14 @@
     globals = {
       mapleader = " ";
     };
+    keymaps = [
+      {
+        key = "<leader>noh";
+        mode = "n";
+        silent = true;
+        action = ":noh<CR>";
+      }
+    ];
     lineNumberMode = "relNumber";
     languages = {
       enableTreesitter = true;
