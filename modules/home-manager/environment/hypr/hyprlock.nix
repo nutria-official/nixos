@@ -1,60 +1,82 @@
-#let
-#  font = "Comic Mono";
-#in
-#{
-#  general = {
-#    hide_cursor = true;
-#  };
-#  background = {
-#    color = "#272822";
-#  };
-#  input-field = {
-#    size = "20%, 5%";
-#    outline_thickness = 3;
-#    inner_color = "rgba(0, 0, 0, 0.0)";
-#    outer_color = "rgba(143, 143, 143, 1)";
-#    font_family = font;
-#  };
-#}
+let
+  font = "Comic Mono";
+in
 {
   general = {
     hide_cursor = true;
-    ignore_empty_input = true;
   };
-
-  animations = {
-    enabled = true;
-    fade_in = {
-      duration = 300;
-      bezier = "easeOutQuint";
-    };
-    fade_out = {
-      duration = 300;
-      bezier = "easeOutQuint";
-    };
+  background = {
+    color = "#222436";
   };
+  input-field = {
+    size = "20%, 5%";
+    outline_thickness = 3;
+    inner_color = "rgba(0, 0, 0, 0.0)";
 
-  background = [
+    outer_color = "rgba(143, 143, 143, 1)";
+    check_color = "rgba(00ff99ee) rgba (ff6633ee) 120 deg";
+    fail_color = "rgba(ff6633ee) rgba(ff0066ee) 40deg";
+
+    font_color = "rgba(C0CAf5EE)";
+    fade_on_emty = false;
+    rounding = 15;
+
+    font_family = font;
+    placeholder_txt = "password...";
+
+    dots_spacing = 0.3;
+
+    position = "0, -20";
+    halign = "center";
+    valign = "center";
+  };
+  label = [
     {
-      path = "screenshot";
-      blur_passes = 3;
-      blur_size = 8;
+      description = "Clock widget.";
+      text = "$TIME";
+      font_size = 90;
+      font_family = font;
+
+      position = "0, -100";
+      halign = "center";
+      valign = "top";
     }
-  ];
-
-  input-field = [
     {
-      size = "200, 50";
-      position = "0, -80";
-      monitor = "";
-      dots_center = true;
-      fade_on_empty = false;
-      font_color = "rgb(202, 211, 245)";
-      inner_color = "rgb(91, 96, 120)";
-      outer_color = "rgb(24, 25, 38)";
-      outline_thickness = 5;
-      placeholder_text = "Password...";
-      shadow_passes = 2;
+      description = "Date widget.";
+      text = "cmd[update:60000] date +\"%A, %d %B %Y\"";
+      font_size = 25;
+      font_family = font;
+
+      position = "0, -250";
+      halign = "center";
+      valign = "top";
+    }
+    {
+      description = "Keyboard layout.";
+      text = "$LAYOUT[dk]";
+      font_size = 24;
+
+      position = "250, -20";
+      halign = "center";
+      valign = "center";
+    }
+    {
+      description = "User widget.";
+      text = "$USER";
+      font_size = 25;
+      font_family = font;
+      position = "0, 50";
+      halign = "center";
+      valign = "center";
+    }
+    {
+      description = "Fail reason.";
+      text = "$FAIL";
+      font_size = 12;
+      font_family = font;
+      position = "0, -70";
+      halign = "center";
+      valign = "center";
     }
   ];
 }
