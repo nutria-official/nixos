@@ -45,7 +45,7 @@
   programs = {
     bash = {
       interactiveShellInit = ''
-        				alias supdate='sudo nix flake update && sudo nixos-rebuild switch --upgrade --flake .#laptop'
+        				alias supdate='sudo nix flake update --flake .#laptop && sudo nixos-rebuild switch --upgrade --flake .#laptop'
         				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
         			'';
     };
