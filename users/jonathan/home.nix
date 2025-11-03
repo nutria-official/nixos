@@ -75,8 +75,8 @@
       enable = true;
       settings = {
         user = {
-          name = "cat ${config.sops.secrets."name".path}";
-          email = "cat ${config.sops.secrets."email".path}";
+          name = "${builtins.readFile config.sops.secrets."name".path}";
+          email = "${builtins.readFile config.sops.secrets."email".path}";
         };
       };
     };

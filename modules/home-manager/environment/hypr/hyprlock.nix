@@ -6,25 +6,22 @@ in
     hide_cursor = true;
   };
   background = {
-    color = "#222436";
+    color = "rgba(222436FF)";
   };
   input-field = {
     size = "20%, 5%";
     outline_thickness = 3;
-    inner_color = "rgba(0, 0, 0, 0.0)";
+    inner_color = "rgba(222436FF)";
 
-    outer_color = "rgba(143, 143, 143, 1)";
-    check_color = "rgba(00ff99ee) rgba (ff6633ee) 120 deg";
-    fail_color = "rgba(ff6633ee) rgba(ff0066ee) 40deg";
+    outer_color = "rgba(FF966CFF)";
+    fail_color = "rgba(222436FF)";
+    check_color = "rgba(222436FF)";
 
-    font_color = "rgba(C0CAf5EE)";
+    font_color = "rgba(C0CAf5FF)";
     fade_on_emty = false;
     rounding = 15;
 
     font_family = font;
-    placeholder_txt = "password...";
-
-    dots_spacing = 0.3;
 
     position = "0, -20";
     halign = "center";
@@ -50,15 +47,6 @@ in
       position = "0, -250";
       halign = "center";
       valign = "top";
-    }
-    {
-      description = "Keyboard layout.";
-      text = "$LAYOUT[dk]";
-      font_size = 24;
-
-      position = "250, -20";
-      halign = "center";
-      valign = "center";
     }
     {
       description = "User widget.";
