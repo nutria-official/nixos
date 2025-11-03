@@ -1,8 +1,7 @@
 * {
 	font-family: Comic Mono, Symbols Nerd Font Mono;
-	font-size: 16px;
+	font-size: 14px;
   background-color: #222436;
-  border: transparent;
   color: #C0CAF5;
 }
 
@@ -48,7 +47,7 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-	background-color: #C25457;
+  color: #C25457;
 	padding: 0 5 0 5px;
 }
 

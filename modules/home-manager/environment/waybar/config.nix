@@ -53,7 +53,7 @@
     };
 
     "custom/spider" = {
-      format = "\uef10";
+      format = ''\uef10'';
       on-click = "hyprsunset -t 4000";
       tooltip = false;
     };
