@@ -1,6 +1,6 @@
 {
   mainBar = {
-    height = 20;
+    height = 10;
     spacing = 5;
     layer = "top";
     position = "top";
@@ -20,13 +20,11 @@
 
     battery = {
       format = "{capacity}% {icon}";
-
       states = {
         warning = 40;
         critical = 20;
       };
       format-plugged = "{capacity}% 󰂄";
-
       format-icons = [
         "󰁺"
         "󰁻"
@@ -39,7 +37,7 @@
         "󰂂"
         "󰁹"
       ];
-      tooltip = true;
+      tooltip = false;
     };
 
     pulseaudio = {
@@ -50,6 +48,7 @@
         "\uf027"
         "\uf028"
       ];
+      tooltip = false;
     };
 
     "custom/spider" = {
