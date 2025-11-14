@@ -35,6 +35,7 @@
       osu-lazer-bin
       prismlauncher
       processing
+      python315
       python313Packages.pip
       python313Packages.urwid
       resources
