@@ -22,10 +22,7 @@
       brightnessctl
       chromium
       clang
-      distrobox
       dunst
-      element-desktop
-      extremetuxracer
       hyprpicker
       libnotify
       nemo
@@ -34,14 +31,10 @@
       opentabletdriver
       osu-lazer-bin
       prismlauncher
-      processing
       python315
-      python313Packages.pip
-      python313Packages.urwid
       resources
       signal-desktop
       steam-run
-      tor-browser
       unzip
       veracrypt
       vlc
@@ -68,10 +61,6 @@
   };
 
   programs = {
-    firefox = {
-      enable = true;
-    };
-
     git = {
       enable = true;
       settings = {
@@ -91,6 +80,9 @@
     hyprshot = {
       enable = true;
       saveLocation = "$HOME/Pictures/screenshots/";
+    };
+    librewolf = {
+      enable = true;
     };
     nvf = {
       enable = true;
