@@ -5,3 +5,5 @@
 4. Make hyprland config declarative.
 5. Make kitty config declarative.
 6. Fix system-theme.
+7. Dunst config.
+8. Wofi config.
