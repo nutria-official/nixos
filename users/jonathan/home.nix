@@ -37,7 +37,6 @@
       signal-desktop
       steam-run
       unzip
-      ventoy
       veracrypt
       vlc
       waypipe
