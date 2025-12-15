@@ -23,6 +23,7 @@
       chromium
       clang
       dunst
+      gparted
       hyprpicker
       libnotify
       nemo
@@ -36,6 +37,7 @@
       signal-desktop
       steam-run
       unzip
+      ventoy
       veracrypt
       vlc
       waypipe
