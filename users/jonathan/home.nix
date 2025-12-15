@@ -88,6 +88,11 @@
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
+    starship = {
+      enable = true;
+      enableBashIntegration = true;
+      #settings = import ../../modules/home-manager/starship.nix;
+    };
     waybar = {
       enable = true;
       settings = import ../../modules/home-manager/environment/waybar/config.nix;
