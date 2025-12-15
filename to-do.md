@@ -9,3 +9,7 @@
 8. Wofi config.
 9. Default programs for mimetypes.
 10. Fix sops.
+11. Check out zsh.
+12. VI-bindings in terminal.
+13. Yazi configuration.
+14. Librewolf configuration.
