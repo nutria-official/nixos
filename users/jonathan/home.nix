@@ -23,6 +23,8 @@
       chromium
       clang
       dunst
+      gcc
+      gdb
       gparted
       hyprpicker
       libnotify
