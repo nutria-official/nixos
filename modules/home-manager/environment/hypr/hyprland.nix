@@ -35,7 +35,7 @@ in
     "inactive_opacity" = 1.0;
   };
   animations = {
-    "enable" = "no";
+    "enabled" = "no";
   };
   dwindle = {
     "pseudotile" = true;
@@ -64,43 +64,53 @@ in
   bind = [
     "${default.mod}, Q, exec, ${default.terminal}"
     "${default.mod}, C, killactive"
-    "${default.mod}, SHIFT, C, forcekillactive"
+    "${default.mod} SHIFT, C, forcekillactive"
     "${default.mod}, E, exec, ${default.file_manager}"
     "${default.mod}, V, togglefloating"
     "${default.mod}, R, exec, ${default.app_launcher}"
     "${default.mod}, P, pseudo"
-    "${default.mod}, SHIFT, J, togglesplit"
+    "${default.mod} SHIFT, J, togglesplit"
     "${default.mod}, F, fullscreen"
-    "${default.mod}, SHIFT, L, exec, ${default.lock_screen}"
+    "${default.mod} SHIFT, L, exec, ${default.lock_screen}"
     "${default.mod}, B, exec, ${default.browser}"
-    "${default.mod}, SHIFT, S, exec, ${default.screenshot_utility} -m region --clipboard-only"
+    "${default.mod} SHIFT, S, exec, ${default.screenshot_utility} -m region --clipboard-only"
     "${default.mod}, S, exec, ${default.screenshot_utility} -m region"
-    "${default.mod}, SHIFT, P, exec, ${default.color_picker}"
+    "${default.mod} SHIFT, P, exec, ${default.color_picker}"
 
     "${default.mod}, H, movefocus, l"
     "${default.mod}, J, movefocus, d"
     "${default.mod}, K, movefocus, u"
     "${default.mod}, L, movefocus, r"
-    "${default.mod},"
 
-    "${default.mod}, SHIFT, 1, movetoworkspace, 1"
-    "${default.mod}, SHIFT, 2, movetoworkspace, 2"
-    "${default.mod}, SHIFT, 3, movetoworkspace, 3"
-    "${default.mod}, SHIFT, 4, movetoworkspace, 4"
-    "${default.mod}, SHIFT, 5, movetoworkspace, 5"
-    "${default.mod}, SHIFT, 6, movetoworkspace, 6"
-    "${default.mod}, SHIFT, 7, movetoworkspace, 7"
-    "${default.mod}, SHIFT, 8, movetoworkspace, 8"
-    "${default.mod}, SHIFT, 9, movetoworkspace, 9"
-    "${default.mod}, SHIFT, 0, movetoworkspace, 10"
+    "${default.mod}, 1, workspace, 1"
+    "${default.mod}, 2, workspace, 2"
+    "${default.mod}, 3, workspace, 3"
+    "${default.mod}, 4, workspace, 4"
+    "${default.mod}, 5, workspace, 5"
+    "${default.mod}, 6, workspace, 6"
+    "${default.mod}, 7, workspace, 7"
+    "${default.mod}, 8, workspace, 8"
+    "${default.mod}, 9, workspace, 9"
+    "${default.mod}, 0, workspace, 10"
 
-    "${default.mod},"
-    "${default.mod},"
-    "${default.mod},"
-    "${default.mod},"
-    "${default.mod},"
-    "${default.mod},"
-    "${default.mod},"
-    "${default.mod},"
+    "${default.mod} SHIFT, 1, movetoworkspace, 1"
+    "${default.mod} SHIFT, 2, movetoworkspace, 2"
+    "${default.mod} SHIFT, 3, movetoworkspace, 3"
+    "${default.mod} SHIFT, 4, movetoworkspace, 4"
+    "${default.mod} SHIFT, 5, movetoworkspace, 5"
+    "${default.mod} SHIFT, 6, movetoworkspace, 6"
+    "${default.mod} SHIFT, 7, movetoworkspace, 7"
+    "${default.mod} SHIFT, 8, movetoworkspace, 8"
+    "${default.mod} SHIFT, 9, movetoworkspace, 9"
+    "${default.mod} SHIFT, 0, movetoworkspace, 10"
+
+    #"${default.mod}, "
+    #"${default.mod},"
+    #"${default.mod},"
+    #"${default.mod},"
+    #"${default.mod},"
+    #"${default.mod},"
+    #"${default.mod},"
+    #"${default.mod},"
   ];
 }
