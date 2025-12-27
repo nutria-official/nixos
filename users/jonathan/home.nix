@@ -64,6 +64,9 @@
   };
 
   programs = {
+    ashell = {
+      enable = true;
+    };
     git = {
       enable = true;
       settings = {
@@ -86,6 +89,10 @@
     };
     kitty = {
       enable = true;
+      keybindings = {
+        "ctrl+shift+c" = "copy_to_clipboard";
+        "ctrl+shift+v" = "paste_from_clipboard";
+      };
       shellIntegration.enableZshIntegration = true;
       settings = import ../../modules/home-manager/environment/kitty/kitty-config.nix;
       themeFile = "tokyo_night_moon";
@@ -113,6 +120,15 @@
     };
     zsh = {
       enable = true;
+    };
+  };
+  wayland = {
+    windowManager = {
+      hyprland = {
+        enable = true;
+        settings = import ../../modules/home-manager/environment/hypr/hyprland.nix;
+        xwayland.enable = true;
+      };
     };
   };
 }

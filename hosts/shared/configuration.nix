@@ -43,19 +43,19 @@
   };
 
   programs = {
-    bash = {
-      interactiveShellInit = ''
-        				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
-        			'';
-    };
+    #bash = {
+    # interactiveShellInit = ''
+    #    				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
+    #    			'';
+    #};
 
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-      xwayland = {
-        enable = true;
-      };
-    };
+    #hyprland = {
+    #  enable = true;
+    #  withUWSM = true;
+    #  xwayland = {
+    #    enable = true;
+    #  };
+    #};
 
     noisetorch = {
       enable = true;
