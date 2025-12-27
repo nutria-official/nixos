@@ -11,6 +11,7 @@
 {
   imports = [
     ../../secrets/sops.nix
+    ../../modules/home-manager/zsh/zsh.nix
   ];
 
   home = {
@@ -23,7 +24,6 @@
       chromium
       clang
       dunst
-      gcc
       gdb
       gparted
       hyprpicker
@@ -84,6 +84,12 @@
       enable = true;
       saveLocation = "$HOME/Pictures/screenshots/";
     };
+    kitty = {
+      enable = true;
+      shellIntegration.enableZshIntegration = true;
+      settings = import ../../modules/home-manager/environment/kitty/kitty-config.nix;
+      themeFile = "tokyo_night_moon";
+    };
     librewolf = {
       enable = true;
     };
@@ -93,7 +99,7 @@
     };
     starship = {
       enable = true;
-      enableBashIntegration = true;
+      enableZshIntegration = true;
       #settings = import ../../modules/home-manager/starship.nix;
     };
     waybar = {
@@ -103,6 +109,9 @@
     };
 
     wofi = {
+      enable = true;
+    };
+    zsh = {
       enable = true;
     };
   };

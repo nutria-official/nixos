@@ -45,7 +45,6 @@
   programs = {
     bash = {
       interactiveShellInit = ''
-        				alias supdate='sudo nix flake update --flake .#laptop && sudo nixos-rebuild switch --upgrade --flake .#laptop'
         				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
         			'';
     };
@@ -140,7 +139,6 @@
       greetd.tuigreet
       home-manager
       keepassxc
-      kitty
       networkmanagerapplet
       protonvpn-gui
       wireguard-tools # For protonvpn-gui.
@@ -165,18 +163,5 @@
       allowUnfree = true;
     };
   };
-  xdg = {
-    mime = {
-      defaultApplications = {
-        "inode/directory" = "yazi.desktop";
-      };
-      addedAssociations = {
-        "inode/directory" = "yazi.desktop";
-      };
-    };
-  };
-
-  #nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
   system.stateVersion = "25.05"; # Did you read the comment? DO NOT CHANGE THIS VALUE.
 }
