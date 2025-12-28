@@ -48,15 +48,6 @@
     #    				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
     #    			'';
     #};
-
-    #hyprland = {
-    #  enable = true;
-    #  withUWSM = true;
-    #  xwayland = {
-    #    enable = true;
-    #  };
-    #};
-
     noisetorch = {
       enable = true;
     };
@@ -140,8 +131,6 @@
       home-manager
       keepassxc
       networkmanagerapplet
-      protonvpn-gui
-      wireguard-tools # For protonvpn-gui.
       seahorse
       sops
       wget
