@@ -65,9 +65,6 @@
   };
 
   programs = {
-    ashell = {
-      enable = true;
-    };
     git = {
       enable = true;
       settings = {
