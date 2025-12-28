@@ -25,7 +25,6 @@
       clang
       dunst
       gdb
-      gparted
       hyprpicker
       libnotify
       nemo
@@ -34,6 +33,7 @@
       opentabletdriver
       osu-lazer-bin
       prismlauncher
+      protonvpn-gui
       python315
       resources
       signal-desktop
@@ -43,6 +43,7 @@
       vlc
       waypipe
       winboat
+      wireguard-tools # For protonvpn
       yazi
       zip
       zotero
@@ -103,11 +104,6 @@
     nvf = {
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
-    };
-    starship = {
-      enable = true;
-      enableZshIntegration = true;
-      #settings = import ../../modules/home-manager/starship.nix;
     };
     waybar = {
       enable = true;
