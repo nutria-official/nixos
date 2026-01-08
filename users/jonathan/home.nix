@@ -19,6 +19,7 @@
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
     packages = with pkgs; [
+      bottles
       brave
       brightnessctl
       chromium
