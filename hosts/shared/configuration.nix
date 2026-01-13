@@ -43,11 +43,11 @@
   };
 
   programs = {
-    #bash = {
-    # interactiveShellInit = ''
-    #    				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
-    #    			'';
-    #};
+    bash = {
+      interactiveShellInit = ''
+            				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
+        #    			'';
+    };
     noisetorch = {
       enable = true;
     };
@@ -131,6 +131,7 @@
       home-manager
       keepassxc
       networkmanagerapplet
+      proton-vpn-cli
       seahorse
       sops
       wget

@@ -34,7 +34,6 @@
       opentabletdriver
       osu-lazer-bin
       prismlauncher
-      protonvpn-gui
       python315
       resources
       signal-desktop
@@ -44,7 +43,6 @@
       vlc
       waypipe
       winboat
-      wireguard-tools # For protonvpn
       yazi
       zip
       zotero
