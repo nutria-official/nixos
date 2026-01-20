@@ -19,6 +19,7 @@
       extraGroups = [
         "libvirtd"
         "docker"
+        "dialout"
       ];
     };
     windows = {
@@ -45,13 +46,12 @@
   programs = {
     bash = {
       interactiveShellInit = ''
-            				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
-        #    			'';
+        				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
+        			'';
     };
     noisetorch = {
       enable = true;
     };
-
     steam = {
       enable = true;
     };
@@ -131,7 +131,6 @@
       home-manager
       keepassxc
       networkmanagerapplet
-      proton-vpn-cli
       seahorse
       sops
       wget
