@@ -34,6 +34,23 @@
           enable = true;
         };
       };
+      lua = {
+        enable = true;
+        lsp = {
+          enable = true;
+        };
+      };
+      markdown = {
+        enable = true;
+        extensions = {
+          markview-nvim = {
+            enable = true;
+          };
+        };
+        lsp = {
+          enable = true;
+        };
+      };
       nix = {
         enable = true;
         format = {
@@ -56,7 +73,7 @@
     };
     lsp = {
       enable = true;
-      formatOnSave = true;
+      formatOnSave = false;
       inlayHints = {
         enable = true;
       };
