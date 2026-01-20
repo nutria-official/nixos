@@ -11,7 +11,7 @@
   };
   nix = {
     gc = {
-      options = "--delete-older-than +5";
+      options = "5d";
       automatic = true;
       dates = "weekly";
     };
