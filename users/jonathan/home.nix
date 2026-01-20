@@ -19,6 +19,7 @@
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
     packages = with pkgs; [
+      arduino-ide
       bottles
       brave
       brightnessctl
