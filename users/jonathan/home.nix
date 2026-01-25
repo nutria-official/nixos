@@ -35,7 +35,7 @@
       opentabletdriver
       osu-lazer-bin
       prismlauncher
-      #proton-vpn-cli
+      proton-vpn-cli
       python315
       resources
       signal-desktop
