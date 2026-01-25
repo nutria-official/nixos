@@ -67,22 +67,16 @@
   };
 
   services = {
+    displayManager.ly = {
+      enable = true;
+      x11Support = true;
+    };
     flatpak = {
       enable = true;
     };
     gnome = {
       gnome-keyring = {
         enable = true;
-      };
-    };
-    greetd = {
-      enable = true;
-      restart = true;
-      settings = {
-        default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet -t -r --remember-session";
-          user = "greeter"; # NOT a username
-        };
       };
     };
 
