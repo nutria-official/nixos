@@ -16,6 +16,12 @@ let
   };
 in
 {
+  "exec-once" = [
+    "${default.widget_manager}"
+    "${default.idle_daemon}"
+    "${default.notification_center}"
+    "${default.wallpaper_manager}"
+  ];
   "monitor" = ", preferred, auto, auto";
   general = {
     "gaps_in" = 2;
@@ -26,6 +32,11 @@ in
     "resize_on_border" = true;
     "allow_tearing" = false;
     "layout" = "dwindle";
+  };
+
+  xwayland = {
+    "force_zero_scaling" = true;
+    "use_nearest_neighbor" = true;
   };
 
   decoration = {
