@@ -40,6 +40,7 @@
       resources
       signal-desktop
       steam-run
+      tigervnc
       unzip
       veracrypt
       vlc
