@@ -8,5 +8,5 @@
   imports = [
     ./hardware-configuration.nix
   ];
-  hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
+  # hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
 }
