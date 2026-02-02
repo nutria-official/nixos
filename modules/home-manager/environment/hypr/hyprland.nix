@@ -22,7 +22,7 @@ in
     "${default.notification_center}"
     "${default.wallpaper_manager}"
   ];
-  "monitor" = ", preferred, auto, auto";
+  "monitor" = ", preferred@144, auto, auto";
   general = {
     "gaps_in" = 2;
     "gaps_out" = 4;
