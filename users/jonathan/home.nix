@@ -36,6 +36,7 @@
       osu-lazer-bin
       prismlauncher
       proton-vpn-cli
+      proton-pass-cli
       python315
       resources
       signal-desktop
