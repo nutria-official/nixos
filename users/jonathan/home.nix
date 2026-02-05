@@ -54,6 +54,9 @@
   };
 
   services = {
+    kdeconnect = {
+      enable = true;
+    };
     hypridle = {
       enable = true;
       settings = import ../../modules/home-manager/environment/hypr/hypridle.nix;
@@ -87,9 +90,6 @@
     hyprshot = {
       enable = true;
       saveLocation = "$HOME/Pictures/screenshots/";
-    };
-    kdeconnect = {
-      enable = true;
     };
     kitty = {
       enable = true;
