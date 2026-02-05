@@ -88,6 +88,9 @@
       enable = true;
       saveLocation = "$HOME/Pictures/screenshots/";
     };
+    kdeconnect = {
+      enable = true;
+    };
     kitty = {
       enable = true;
       keybindings = {
