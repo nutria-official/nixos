@@ -13,3 +13,4 @@
 12. VI-bindings in terminal.
 13. Yazi configuration.
 14. Librewolf configuration.
+15. Windows user configuration
