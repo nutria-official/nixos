@@ -22,7 +22,10 @@ in
     "${default.notification_center}"
     "${default.wallpaper_manager}"
   ];
-  "monitor" = ", preferred@144, auto, auto";
+  "monitor" = [ 
+    "HDMI-A-3, 2560x1440@144, 0x0, 1" 
+    ", preferred, auto, auto"
+  ];
   general = {
     "gaps_in" = 2;
     "gaps_out" = 4;
