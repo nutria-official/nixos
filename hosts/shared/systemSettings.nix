@@ -4,10 +4,11 @@
   networking = {
     firewall = {
       checkReversePath = false;
-      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ]; # Kdeconnect
-      allowedUDPPortRanges = [ { from = 1714; to = 1764; } ]; # Kdeconnect
     };
-
+    firewall = rec {
+      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+      allowedUDPPortRanges =  [ { from = 1714; to = 1764; } ];
+    };
     networkmanager = {
       enable = true;
     };
