@@ -64,9 +64,15 @@
         enable = true;
       };
     };
+    bluetooth = {
+      enable = true;
+    };
   };
 
   services = {
+    blueman = {
+      enable = true;
+    };
     displayManager.ly = {
       enable = true;
       x11Support = true;
