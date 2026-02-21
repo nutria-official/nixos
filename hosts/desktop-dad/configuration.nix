@@ -9,4 +9,9 @@
     ./hardware-configuration.nix
   ];
   hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
+  programs = {
+    kdeconnect = {
+      enable = true;
+    };
+  };
 }

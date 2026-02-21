@@ -54,9 +54,9 @@
   };
 
   services = {
-    kdeconnect = {
-      enable = true;
-    };
+    #kdeconnect = {
+    # enable = true;
+    #};
     hypridle = {
       enable = true;
       settings = import ../../modules/home-manager/environment/hypr/hypridle.nix;
