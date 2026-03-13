@@ -26,11 +26,11 @@
       chromium
       clang
       dunst
+      fastfetch
       gdb
       hyprpicker
       libnotify
       nemo
-      neofetch
       onlyoffice-desktopeditors
       opentabletdriver
       osu-lazer-bin
