@@ -16,7 +16,7 @@
   users.users = {
     jonathan = {
       group = "wheel";
-      hashedPasswordFile = config.sops.secrets.hashedPassword.path;
+      hashedPasswordFile = config.sops.secrets."hashedPassword/jonathan".path;
       isNormalUser = true;
       extraGroups = [
         "libvirtd"
@@ -26,6 +26,10 @@
     };
     windows = {
       isNormalUser = true;
+      hashedPasswordFile = config.sops.secrets."hashedPassword/windows".path;
+      extraGroups = [
+        "docker"
+      ];
     };
   };
   nix = {
