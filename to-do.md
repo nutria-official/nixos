@@ -14,3 +14,4 @@
 13. Yazi configuration.
 14. Librewolf configuration.
 15. Windows user configuration
+16. Github private key declarative
