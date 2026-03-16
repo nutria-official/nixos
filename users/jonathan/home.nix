@@ -75,8 +75,8 @@
       enable = true;
       settings = {
         user = {
-          name = "${config.sops.secrets."github/name".path}";
-          email = "${config.sops.secrets."github/email".path}";
+          name = builtins.readFile config.sops.secrets."github/name".path;
+          email = builtins.readFile config.sops.secrets."github/email".path;
         };
       };
     };
