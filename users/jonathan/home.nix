@@ -75,8 +75,8 @@
       enable = true;
       settings = {
         user = {
-          name = config.sops.secrets.name.path;
-          email = config.sops.secrets.email.path;
+          name = "${config.sops.secrets."github/name".path}";
+          email = "${config.sops.secrets."github/email".path}";
         };
       };
     };
