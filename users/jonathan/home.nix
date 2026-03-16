@@ -10,7 +10,7 @@
 
 {
   imports = [
-    ../../secrets/sops.nix
+    ../../secrets/sops-home.nix
     ../../modules/home-manager/zsh/zsh.nix
   ];
 
@@ -75,8 +75,8 @@
       enable = true;
       settings = {
         user = {
-          name = "${builtins.readFile config.sops.secrets."name".path}";
-          email = "${builtins.readFile config.sops.secrets."email".path}";
+          name = config.sops.secrets.name.path;
+          email = config.sops.secrets.email.path;
         };
       };
     };

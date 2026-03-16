@@ -10,11 +10,13 @@
   imports = [
     ./boot.nix
     ./systemSettings.nix
+    ../../secrets/sops.nix
   ];
 
   users.users = {
     jonathan = {
       group = "wheel";
+      hashedPasswordFile = config.sops.secrets.hashedPassword.path;
       isNormalUser = true;
       extraGroups = [
         "libvirtd"
