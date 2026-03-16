@@ -135,7 +135,6 @@
   environment = {
     systemPackages = with pkgs; [
       gnumake
-      greetd.tuigreet
       home-manager
       keepassxc
       networkmanagerapplet
