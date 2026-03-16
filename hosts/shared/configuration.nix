@@ -14,6 +14,8 @@
   ];
 
   users.users = {
+    root.hashedPasswordFile = config.sops.secrets."hashedPassword/root".path;
+
     jonathan = {
       group = "wheel";
       hashedPasswordFile = config.sops.secrets."hashedPassword/jonathan".path;
