@@ -24,7 +24,7 @@ in
   ];
   "monitor" = [ 
     "HDMI-A-3, 2560x1440@144, 0x0, 1" 
-    ", preferred, auto, auto"
+    ", preferred, 0x0, 1"
   ];
   general = {
     "gaps_in" = 2;
