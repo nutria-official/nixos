@@ -17,3 +17,4 @@
 16. Github private key declarative
 17. Noctalia shell
 18. Scrolling hyprland
+19. nix-shells
