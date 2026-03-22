@@ -17,7 +17,10 @@
     gc = {
       options = "5d";
       automatic = true;
-      dates = "weekly";
+      dates = "daily";
+    };
+    settings = {
+      auto-optimise-store = true;
     };
   };
   time = {
@@ -64,4 +67,6 @@
       };
     };
   };
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.dates = "weekly";
 }
