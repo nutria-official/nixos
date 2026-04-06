@@ -57,6 +57,9 @@
         				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
         			'';
     };
+    hyprland = {
+      enable = true;
+    };
     noisetorch = {
       enable = true;
     };
