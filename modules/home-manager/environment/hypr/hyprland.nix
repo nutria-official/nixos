@@ -1,25 +1,23 @@
 let
   default = {
-    app_launcher = "wofi --show drun";
+    app_launcher = "fuzzel";
     browser = "brave";
     color_picker = "hyprpicker";
     file_manager = "yazi";
     idle_daemon = "hypridle";
     lock_screen = "hyprlock";
-    notification_center = "dunst";
     mod = "super";
     screenshot_utility = "hyprshot";
     screen_temperature_manager = "hyprsunset";
     terminal = "kitty";
     wallpaper_manager = "hyprlock";
-    widget_manager = "waybar";
+    widget_manager = "noctalia-shell";
   };
 in
 {
   "exec-once" = [
     "${default.widget_manager}"
     "${default.idle_daemon}"
-    "${default.notification_center}"
     "${default.wallpaper_manager}"
   ];
   "monitor" = [ 

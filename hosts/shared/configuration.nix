@@ -85,9 +85,6 @@
       enable = true;
       x11Support = true;
     };
-    flatpak = {
-      enable = true;
-    };
     gnome = {
       gnome-keyring = {
         enable = true;
@@ -154,6 +151,9 @@
     ];
   };
 
+  xdg.portal = {
+    enable = true;
+  };
   nixpkgs = {
     config = {
       allowUnfree = true;

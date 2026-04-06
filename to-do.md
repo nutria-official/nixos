@@ -2,11 +2,9 @@
 1. Add impermanence.
 2. Add LUKS.
 3. Add disko.
-4. Make hyprland config declarative.
-5. Make kitty config declarative.
 6. Fix system-theme.
+- Noctalia theme for everything.
 7. Dunst config.
-8. Wofi config.
 9. Default programs for mimetypes.
 10. Fix sops.
 11. Check out zsh.
@@ -18,3 +16,6 @@
 17. Noctalia shell
 18. Scrolling hyprland
 19. nix-shells
+20. Yazi bookmarks.
+21. ctrl + '+' for zoom in terminal.
+22. hyprland, send to desktop-env without entering desktop-env.

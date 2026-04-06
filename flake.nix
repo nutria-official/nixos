@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nvf = {
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,6 +29,7 @@
       nvf,
       home-manager,
       sops-nix,
+      noctalia,
       ...
     }:
     let
@@ -40,6 +45,7 @@
             sharedModules = [
               sops-nix.homeManagerModules.sops
               nvf.homeManagerModules.default
+              noctalia.homeModules.default
             ];
             useGlobalPkgs = true;
             useUserPackages = true;

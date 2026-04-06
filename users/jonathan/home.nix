@@ -25,7 +25,6 @@
       brightnessctl
       chromium
       clang
-      dunst
       fastfetch
       gdb
       hyprpicker
@@ -49,7 +48,6 @@
       winboat
       yazi
       zip
-      zotero
     ];
   };
 
@@ -71,14 +69,17 @@
   };
 
   programs = {
+    fuzzel = {
+      enable = true;
+    };
     git = {
       enable = true;
-      settings = {
-        user = {
-          name = builtins.readFile config.sops.secrets."github/name".path;
-          email = builtins.readFile config.sops.secrets."github/email".path;
-        };
-      };
+    #  settings = {
+    #    user = {
+    #      name = builtins.readFile config.sops.secrets."github/name".path;
+    #      email = builtins.readFile config.sops.secrets."github/email".path;
+    #    };
+    #  };
     };
     home-manager = {
       enable = true;
@@ -104,19 +105,22 @@
     librewolf = {
       enable = true;
     };
+    noctalia-shell = {
+      enable = true;
+    };
     nvf = {
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
-    waybar = {
-      enable = true;
-      settings = import ../../modules/home-manager/environment/waybar/config.nix;
-      style = ../../modules/home-manager/environment/waybar/style.css;
-    };
+    #waybar = {
+    #  enable = true;
+    #  settings = import ../../modules/home-manager/environment/waybar/config.nix;
+    #  style = ../../modules/home-manager/environment/waybar/style.css;
+    #};
 
-    wofi = {
-      enable = true;
-    };
+    #wofi = {
+    #  enable = true;
+    #};
     zsh = {
       enable = true;
     };

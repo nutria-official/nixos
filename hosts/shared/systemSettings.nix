@@ -36,15 +36,6 @@
     keyMap = "dk";
   };
 
-  xdg = {
-    portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-gtk
-      ];
-    };
-  };
-
   security = {
     rtkit = {
       enable = true;
@@ -65,6 +56,12 @@
       pulse = {
         enable = true;
       };
+    };
+    tuned = {
+      enable = true;
+    };
+    upower = {
+      enable = true;
     };
   };
   system.autoUpgrade.enable = true;
