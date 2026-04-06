@@ -2,11 +2,12 @@
 1. Add impermanence.
 2. Add LUKS.
 3. Add disko.
-6. Fix system-theme.
-- Noctalia theme for everything.
-7. Dunst config.
-9. Default programs for mimetypes.
-10. Fix sops.
+3. Fix system-theme.
+    - Noctalia theme for everything.
+4. Dunst config.
+5. Default programs for mimetypes.
+6. Fix sops.
+7. Noctalia declarative
 11. Check out zsh.
 12. VI-bindings in terminal.
 13. Yazi configuration.
@@ -19,3 +20,4 @@
 20. Yazi bookmarks.
 21. ctrl + '+' for zoom in terminal.
 22. hyprland, send to desktop-env without entering desktop-env.
+
