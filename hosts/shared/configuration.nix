@@ -24,6 +24,7 @@
         "libvirtd"
         "docker"
         "dialout"
+        "networkmanager"
       ];
     };
     windows = {
@@ -60,12 +61,6 @@
     hyprland = {
       enable = true;
     };
-    noisetorch = {
-      enable = true;
-    };
-    steam = {
-      enable = true;
-    };
   };
 
   hardware = {
@@ -81,12 +76,8 @@
   };
 
   services = {
-    blueman = {
-      enable = true;
-    };
     displayManager.ly = {
       enable = true;
-      x11Support = true;
     };
     gnome = {
       gnome-keyring = {
@@ -102,11 +93,6 @@
 
   environment = {
     systemPackages = with pkgs; [
-      gnumake
-      home-manager
-      keepassxc
-      networkmanagerapplet
-      seahorse
       sops
       wget
     ];

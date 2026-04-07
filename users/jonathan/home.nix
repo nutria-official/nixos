@@ -19,17 +19,12 @@
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
     packages = with pkgs; [
-      arduino-ide
-      bottles
       brave
-      brightnessctl
-      chromium
       clang
       fastfetch
       gdb
       hyprpicker
-      libnotify
-      nemo
+      noisetorch
       onlyoffice-desktopeditors
       opentabletdriver
       osu-lazer-bin
@@ -37,14 +32,13 @@
       proton-vpn-cli
       proton-pass-cli
       python315
-      resources
       signal-desktop
+      steam
       steam-run
       tigervnc
       unzip
       veracrypt
       vlc
-      waypipe
       winboat
       yazi
       zip
@@ -52,9 +46,6 @@
   };
 
   services = {
-    #kdeconnect = {
-    # enable = true;
-    #};
     hypridle = {
       enable = true;
       settings = import ../../modules/home-manager/environment/hypr/hypridle.nix;
@@ -112,15 +103,6 @@
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
-    #waybar = {
-    #  enable = true;
-    #  settings = import ../../modules/home-manager/environment/waybar/config.nix;
-    #  style = ../../modules/home-manager/environment/waybar/style.css;
-    #};
-
-    #wofi = {
-    #  enable = true;
-    #};
     zsh = {
       enable = true;
     };
