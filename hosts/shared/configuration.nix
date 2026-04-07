@@ -96,7 +96,7 @@
 
     keyd = {
       enable = true;
-      keyboards = ../../modules/nixos/keyd.nix;
+      keyboards = import ../../modules/nixos/keyd.nix;
     };
   };
 
