@@ -1,4 +1,0 @@
-{
-  preload = "~/Pictures/wallpapers/black.png";
-  wallpaper = ", ~/Pictures/wallpapers/black.png";
-}

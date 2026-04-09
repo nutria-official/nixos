@@ -10,6 +10,7 @@
 
 {
   imports = [
+    ../../modules/home-manager/default.nix
     ../../secrets/sops-home.nix
     ../../modules/home-manager/zsh/zsh.nix
   ];
@@ -45,24 +46,7 @@
     ];
   };
 
-  services = {
-    hypridle = {
-      enable = true;
-      settings = import ../../modules/home-manager/environment/hypr/hypridle.nix;
-    };
-    hyprpaper = {
-      enable = true;
-      settings = import ../../modules/home-manager/environment/hypr/hyprpaper.nix;
-    };
-    hyprsunset = {
-      enable = true;
-    };
-  };
-
   programs = {
-    fuzzel = {
-      enable = true;
-    };
     git = {
       enable = true;
     #  settings = {
@@ -75,28 +59,11 @@
     home-manager = {
       enable = true;
     };
-    hyprlock = {
-      enable = true;
-      settings = import ../../modules/home-manager/environment/hypr/hyprlock.nix;
-    };
     hyprshot = {
       enable = true;
       saveLocation = "$HOME/Pictures/screenshots/";
     };
-    kitty = {
-      enable = true;
-      keybindings = {
-        "ctrl+shift+c" = "copy_to_clipboard";
-        "ctrl+shift+v" = "paste_from_clipboard";
-      };
-      shellIntegration.enableZshIntegration = true;
-      settings = import ../../modules/home-manager/environment/kitty/kitty-config.nix;
-      themeFile = "tokyo_night_moon";
-    };
     librewolf = {
-      enable = true;
-    };
-    noctalia-shell = {
       enable = true;
     };
     nvf = {
@@ -105,15 +72,6 @@
     };
     zsh = {
       enable = true;
-    };
-  };
-  wayland = {
-    windowManager = {
-      hyprland = {
-        enable = true;
-        settings = import ../../modules/home-manager/environment/hypr/hyprland.nix;
-        xwayland.enable = true;
-      };
     };
   };
 }

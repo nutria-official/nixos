@@ -85,6 +85,9 @@
       };
     };
 
+    tuned.enable = true;
+    upower.enable = true;
+
     keyd = {
       enable = true;
       keyboards = import ../../modules/nixos/keyd.nix;
@@ -118,5 +121,8 @@
       allowUnfree = true;
     };
   };
+
+  networking.networkmanager.enable = true;
+
   system.stateVersion = "25.05"; # Did you read the comment? DO NOT CHANGE THIS VALUE.
 }
