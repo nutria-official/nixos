@@ -2,10 +2,6 @@
 1. Add impermanence.
 2. Add LUKS.
 3. Add disko.
-3. Fix system-theme.
-    - Noctalia theme for everything.
-4. Dunst config.
-5. Default programs for mimetypes.
 6. Fix sops.
 7. Noctalia declarative
 11. Check out zsh.
@@ -14,7 +10,6 @@
 14. Librewolf configuration.
 15. Windows user configuration
 16. Github private key declarative
-17. Noctalia shell
 18. Scrolling hyprland
 19. nix-shells
 20. Yazi bookmarks.

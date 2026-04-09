@@ -26,7 +26,7 @@ in
         "col.inactive_border" = "rgba(444E59FF)";
         "resize_on_border" = true;
         "allow_tearing" = false;
-        "layout" = "dwindle";
+        "layout" = "scrolling";
       };
 
       xwayland = {
@@ -41,11 +41,7 @@ in
         "inactive_opacity" = 1.0;
       };
       animations = {
-        "enabled" = "no";
-      };
-      dwindle = {
-        "pseudotile" = true;
-        "preserve_split" = true;
+        "enabled" = "yes";
       };
       master = {
         "new_status" = "master";
@@ -55,7 +51,7 @@ in
         "disable_hyprland_logo" = true;
       };
       input = {
-        "follow_mouse" = 1;
+        "follow_mouse" = 0;
         "kb_layout" = "dk";
         "sensitivity" = 0;
         touchpad = {
@@ -74,10 +70,8 @@ in
         "super, E, exec, yazi"
         "super, V, togglefloating"
         "super, R, exec, ${ipc} launcher toggle"
-        "super, P, pseudo"
-        "super SHIFT, J, togglesplit"
         "super, F, fullscreen"
-        "super SHIFT, L, exec, ${ipc} lockScreen lock"
+        "super, escape, exec, ${ipc} lockScreen lock"
         "super, B, exec, brave"
         "super SHIFT, S, exec, hyprshot -m region --clipboard-only"
         "super, S, exec, hyprshot -m region"
@@ -87,6 +81,9 @@ in
         "super, J, movefocus, d"
         "super, K, movefocus, u"
         "super, L, movefocus, r"
+
+        "super SHIFT, H, layoutmsg, swapcol l"
+        "super SHIFT, L, layoutmsg, swapcol r"
 
         "super, 1, workspace, 1"
         "super, 2, workspace, 2"
