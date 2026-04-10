@@ -3,7 +3,6 @@
 2. Add LUKS.
 3. Add disko.
 6. Fix sops.
-7. Noctalia declarative
 11. Check out zsh.
 12. VI-bindings in terminal.
 13. Yazi configuration.
