@@ -25,6 +25,7 @@
         "docker"
         "dialout"
         "networkmanager"
+        "wireshark"
       ];
     };
     windows = {

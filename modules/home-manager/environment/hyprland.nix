@@ -63,6 +63,7 @@ in
         "name" = "epic-mouse-v1";
         "sensitivity" = -0.5;
       };
+
       bind = [
         "super, Q, exec, kitty"
         "super, C, killactive"
@@ -84,6 +85,9 @@ in
 
         "super SHIFT, H, layoutmsg, swapcol l"
         "super SHIFT, L, layoutmsg, swapcol r"
+
+        "super CTRL, H, layoutmsg, colresize +conf"
+        "super CTRL, L, layoutmsg, colresize -conf"
 
         "super, 1, workspace, 1"
         "super, 2, workspace, 2"
