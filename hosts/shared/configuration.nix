@@ -62,6 +62,9 @@
     hyprland = {
       enable = true;
     };
+    steam = {
+      enable = true;
+    };
     wireshark = {
       enable = true;
     };

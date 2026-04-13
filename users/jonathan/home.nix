@@ -34,7 +34,7 @@
       proton-pass-cli
       python315
       signal-desktop
-      steam
+      #steam
       steam-run
       tigervnc
       unzip
