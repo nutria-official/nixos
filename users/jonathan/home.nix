@@ -41,7 +41,6 @@
       veracrypt
       vlc
       winboat
-      wireshark
       yazi
       zip
     ];

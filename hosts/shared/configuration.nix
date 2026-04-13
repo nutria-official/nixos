@@ -62,6 +62,9 @@
     hyprland = {
       enable = true;
     };
+    wireshark = {
+      enable = true;
+    };
   };
 
   hardware = {
