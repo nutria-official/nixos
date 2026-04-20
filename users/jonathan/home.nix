@@ -21,6 +21,7 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       brave
+      cinny-desktop
       clang
       fastfetch
       gdb
@@ -34,7 +35,6 @@
       proton-pass-cli
       python315
       signal-desktop
-      #steam
       steam-run
       tigervnc
       unzip
