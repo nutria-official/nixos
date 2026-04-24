@@ -5,6 +5,7 @@
   home-manager,
   nvf,
   sops-nix,
+  zen-browser,
   ...
 }:
 
@@ -13,6 +14,7 @@
     ../../modules/home-manager/default.nix
     ../../secrets/sops-home.nix
     ../../modules/home-manager/zsh/zsh.nix
+    zen-browser.homeModules.twilight
   ];
 
   home = {
@@ -72,6 +74,9 @@
     };
     zsh = {
       enable = true;
+    };
+    zen-browser = {
+        enable = true;
     };
   };
 }
