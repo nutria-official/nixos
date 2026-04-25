@@ -9,6 +9,8 @@
     keybindings = {
       "ctrl+shift+c" = "copy_to_clipboard";
       "ctrl+shift+v" = "paste_from_clipboard";
+      "ctrl+shift+plus" = "change_font_size all +2.0";
+      "ctrl+shift+minus" = "change_font_size all -2.0";
     };
 
     settings = {
@@ -43,7 +45,7 @@
       background_blur = 0;
       allow_hyperlinks = 1;
 
-      adjust_line_height = "130%";
+      adjust_line_height = "100%";
 
       cursor_shape = "beam";
       cursor_shape_unfocused = "underline";
