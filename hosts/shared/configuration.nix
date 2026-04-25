@@ -20,6 +20,7 @@
       group = "wheel";
       hashedPasswordFile = config.sops.secrets."hashedPassword/jonathan".path;
       isNormalUser = true;
+      shell = pkgs.zsh;
       extraGroups = [
         "libvirtd"
         "docker"
@@ -54,10 +55,8 @@
   };
 
   programs = {
-    bash = {
-      interactiveShellInit = ''
-        				alias maple='steam-run ~/school/applications/maple/bin/xmaple'
-        			'';
+    zsh = {
+      enable = true;
     };
     hyprland = {
       enable = true;
