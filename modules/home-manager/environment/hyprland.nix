@@ -68,7 +68,7 @@ in
         "super, Q, exec, kitty"
         "super, C, killactive"
         "super SHIFT, C, forcekillactive"
-        "super, E, exec, yazi"
+        "super, E, exec, kitty -e yazi"
         "super, V, togglefloating"
         "super, R, exec, ${ipc} launcher toggle"
         "super, F, fullscreen"

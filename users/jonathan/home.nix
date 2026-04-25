@@ -43,7 +43,6 @@
       veracrypt
       vlc
       winboat
-      yazi
       zip
     ];
   };
@@ -76,7 +75,13 @@
       enable = true;
     };
     zen-browser = {
-        enable = true;
+      enable = true;
+    };
+    yazi = {
+      enable = true;
+      plugins = {
+        bookmarks = pkgs.yaziPlugins.bookmarks;
+      };
     };
   };
 }
