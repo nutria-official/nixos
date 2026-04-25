@@ -77,11 +77,5 @@
     zen-browser = {
       enable = true;
     };
-    yazi = {
-      enable = true;
-      plugins = {
-        bookmarks = pkgs.yaziPlugins.bookmarks;
-      };
-    };
   };
 }
