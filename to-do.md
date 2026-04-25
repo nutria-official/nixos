@@ -12,6 +12,5 @@
 18. Scrolling hyprland
 19. nix-shells
 20. Yazi bookmarks.
-21. ctrl + '+' for zoom in terminal.
 22. hyprland, send to desktop-env without entering desktop-env.
 
