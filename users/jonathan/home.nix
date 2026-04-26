@@ -28,6 +28,7 @@
       fastfetch
       gdb
       hyprpicker
+      nitrokey-app2
       noisetorch
       onlyoffice-desktopeditors
       opentabletdriver

@@ -3,7 +3,7 @@
     defaultSopsFile = ./secrets.yaml;
     defaultSopsFormat = "yaml";
     age = {
-      keyFile = "/etc/sops/age/keys.txt";
+      keyFile = "/home/jonathan/.config/sops/age/keys.txt";
     };
     secrets = {
       "github/name" = {};
