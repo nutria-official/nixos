@@ -13,6 +13,8 @@
     ../../secrets/sops.nix
   ];
 
+  users.mutableUsers = false; # So sops can generate userpasswords.
+
   users.users = {
     root.hashedPasswordFile = config.sops.secrets."hashedPassword/root".path;
 
