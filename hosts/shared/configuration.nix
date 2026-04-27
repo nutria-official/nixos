@@ -66,10 +66,6 @@
     steam = {
       enable = true;
     };
-    ssh = {
-      startAgent = true;
-      
-    };
     wireshark = {
       enable = true;
     };
