@@ -9,11 +9,6 @@
     ./hardware-configuration.nix
   ];
   hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
-  programs = {
-    kdeconnect = {
-      enable = true;
-    };
-  };
 
   users.users.server = {
     isNormalUser = true;
@@ -26,18 +21,18 @@
   };
 
   services = {
-  fail2ban = {
-    enable = true;
-  };
-  openssh = {
-    enable = true;
-    ports = [ 2307 ];
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
+    fail2ban = {
+      enable = true;
+    };
+    openssh = {
+      enable = true;
+      ports = [ 2307 ];
+      settings = {
+        PermitRootLogin = "no";
+        PasswordAuthentication = false;
+      };
     };
   };
-};
 
   networking.firewall.allowedTCPPorts = [ 2307 ];
   networking.firewall.allowedUDPPorts = [ ];
