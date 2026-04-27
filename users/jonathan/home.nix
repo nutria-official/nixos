@@ -42,6 +42,11 @@
       winboat
     ];
   };
+  services = {
+    ssh-agent = {
+      enable = true;
+    };
+  };
 
   programs = {
     git = {
