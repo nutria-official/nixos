@@ -24,7 +24,6 @@
     packages = with pkgs; [
       brave
       cinny-desktop
-      clang
       fastfetch
       gdb
       hyprpicker
@@ -34,29 +33,19 @@
       opentabletdriver
       osu-lazer-bin
       prismlauncher
-      proton-vpn-cli
-      proton-pass-cli
-      python315
+      proton-vpn
       signal-desktop
       steam-run
       tigervnc
-      unzip
       veracrypt
       vlc
       winboat
-      zip
     ];
   };
 
   programs = {
     git = {
       enable = true;
-    #  settings = {
-    #    user = {
-    #      name = builtins.readFile config.sops.secrets."github/name".path;
-    #      email = builtins.readFile config.sops.secrets."github/email".path;
-    #    };
-    #  };
     };
     home-manager = {
       enable = true;
@@ -71,9 +60,6 @@
     nvf = {
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
-    };
-    zsh = {
-      enable = true;
     };
     zen-browser = {
       enable = true;
