@@ -10,6 +10,7 @@
   imports = [
     ./boot.nix
     ./systemSettings.nix
+    ../../modules/nixos/noisetorch.nix
     ../../secrets/sops.nix
   ];
 
