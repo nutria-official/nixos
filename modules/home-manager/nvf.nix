@@ -102,5 +102,13 @@
         };
       };
     };
+    # Permantently borrowed from madshrped.
+    visuals = {
+        nvim-scrollbar.enable = true; # Shows a scrollbar in the editor.
+        nvim-cursorline.enable = true; # Highlights the current cursor line.
+        cinnamon-nvim.enable = true; # Provides smooth scrolling animations.
+        fidget-nvim.enable = true; # Shows LSP progress notifications in the corner.
+        indent-blankline.enable = true; # Shows indentation guides and blank line markers.
+    };
   };
 }
