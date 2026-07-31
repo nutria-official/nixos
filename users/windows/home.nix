@@ -9,7 +9,7 @@
     homeDirectory = "/home/windows";
     stateVersion = "25.05";
     packages = with pkgs; [
-      winboat
+      #winboat
     ];
   };
 }
