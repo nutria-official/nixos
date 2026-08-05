@@ -12,6 +12,7 @@
     ./systemSettings.nix
     ../../modules/nixos/noisetorch.nix
     ../../secrets/sops.nix
+    #../../modules/nixos/cloudflare.nix
   ];
 
   users.mutableUsers = false; # So sops can generate userpasswords.
