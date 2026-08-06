@@ -23,6 +23,7 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       brave
+      brave-origin
       cinny-desktop
       fastfetch
       gdb
