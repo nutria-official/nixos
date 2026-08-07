@@ -28,6 +28,7 @@
       fastfetch
       gdb
       hyprpicker
+      mullvad-browser
       nitrokey-app2
       noisetorch
       onlyoffice-desktopeditors
