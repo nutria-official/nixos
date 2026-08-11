@@ -22,6 +22,7 @@
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
     packages = with pkgs; [
+      arduino-ide
       brave
       brave-origin
       cinny-desktop
