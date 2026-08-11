@@ -132,6 +132,8 @@
     };
   };
 
+  nixpkgs.config.permittedInsecurePackages = [ "electron-40.10.5" ]; # For winboat to work. 2026-08-11.
+
   networking.networkmanager.enable = true;
 
   system.stateVersion = "25.05"; # Did you read the comment? DO NOT CHANGE THIS VALUE.

@@ -41,7 +41,7 @@
       tigervnc
       veracrypt
       vlc
-      #winboat
+      winboat
     ];
   };
   services = {
