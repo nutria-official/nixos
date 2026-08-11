@@ -24,7 +24,6 @@
     packages = with pkgs; [
       arduino-ide
       brave
-      brave-origin
       cinny-desktop
       fastfetch
       gdb
