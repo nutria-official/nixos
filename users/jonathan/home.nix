@@ -22,10 +22,10 @@
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
     packages = with pkgs; [
-      android-studio
       arduino-ide
       brave
       cinny-desktop
+      distrobox
       fastfetch
       gdb
       hyprpicker
