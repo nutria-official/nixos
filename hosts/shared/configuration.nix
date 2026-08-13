@@ -59,16 +59,22 @@
   };
 
   programs = {
-    zsh = {
-      enable = true;
-    };
     hyprland = {
       enable = true;
+    };
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        glibc_multi.static # Maple
+      ];
     };
     steam = {
       enable = true;
     };
     wireshark = {
+      enable = true;
+    };
+    zsh = {
       enable = true;
     };
   };
