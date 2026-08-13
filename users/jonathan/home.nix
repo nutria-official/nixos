@@ -28,6 +28,7 @@
       fastfetch
       gdb
       hyprpicker
+      musescore
       mullvad-browser
       nitrokey-app2
       noisetorch
