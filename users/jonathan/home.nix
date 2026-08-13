@@ -42,6 +42,7 @@
       tigervnc
       veracrypt
       vlc
+      waydroid
       winboat
     ];
   };
