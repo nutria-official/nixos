@@ -25,6 +25,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -35,6 +39,7 @@
       sops-nix,
       noctalia,
       zen-browser,
+      disko,
       ...
     }:
     let
@@ -45,6 +50,7 @@
         home-manager.nixosModules.home-manager
         nvf.nixosModules.default
         sops-nix.nixosModules.sops
+        disko.nixosModules.disko
         {
           home-manager = {
             sharedModules = [
@@ -70,6 +76,7 @@
           inherit system;
           modules = sharedModules ++ [
             ./hosts/laptop/configuration.nix
+            ./hosts/laptop/disko.nix
           ];
         };
         desktop-mom = nixosSystem {
