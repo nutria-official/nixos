@@ -76,7 +76,7 @@
           inherit system;
           modules = sharedModules ++ [
             ./hosts/laptop/configuration.nix
-            ./hosts/laptop/disko.nix
+            #./hosts/laptop/disko.nix
           ];
         };
         desktop-mom = nixosSystem {
