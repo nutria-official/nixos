@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   system.autoUpgrade.enable = true;
@@ -11,6 +11,6 @@
       };
       efi.canTouchEfiVariables = true;
     };
+    tmp.cleanOnBoot = true;
   };
-
 }
