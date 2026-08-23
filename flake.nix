@@ -6,12 +6,12 @@
       url = "nixpkgs/nixos-unstable";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell/legacy-v4";
-      inputs.nixpkgs.follows = "nixpkgs";
+     url = "github:noctalia-dev/noctalia/cachix";
+      #inputs.nixpkgs.follows = "nixpkgs"; # Disabled for cachix to work.
     };
     nvf = {
       url = "github:NotAShelf/nvf";
@@ -21,10 +21,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #zen-browser = {
+    #  url = "github:0xc000022070/zen-browser-flake";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,7 +38,7 @@
       home-manager,
       sops-nix,
       noctalia,
-      zen-browser,
+    #zen-browser,
       disko,
       ...
     }:
@@ -62,7 +62,10 @@
             useUserPackages = true;
             users.jonathan = ./users/jonathan/home.nix;
             users.windows = ./users/windows/home.nix;
-            extraSpecialArgs = inputs;
+            extraSpecialArgs = {
+              inherit system;
+              inherit inputs;
+            };
           };
         }
       ];

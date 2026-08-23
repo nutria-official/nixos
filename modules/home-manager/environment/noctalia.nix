@@ -4,8 +4,8 @@
 # Documentation: https://docs.noctalia.dev/ 
 
 {
-  programs.noctalia-shell = {
+  programs.noctalia = {
     enable = true;
-    settings = builtins.fromJSON (builtins.readFile ./noctalia.json);
+    #settings = builtins.fromJSON (builtins.readFile ./noctalia.json);
   };
 }

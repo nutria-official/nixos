@@ -1,7 +1,7 @@
 {...}:
 
 let
- ipc = "noctalia-shell ipc call"; 
+ ipc = "noctalia msg"; 
 in
 
 {
@@ -9,10 +9,11 @@ in
     enable = true;
 
     xwayland.enable = true;
+    configType = "hyprlang";
 
     settings = {
       "exec-once" = [
-        "noctalia-shell"
+        "noctalia"
       ];
       "monitor" = [ 
         "HDMI-A-3, 2560x1440@144, 0x0, 1" 
@@ -70,9 +71,9 @@ in
         "super SHIFT, C, forcekillactive"
         "super, E, exec, kitty -e yazi"
         "super, V, togglefloating"
-        "super, R, exec, ${ipc} launcher toggle"
+        "super, R, exec, ${ipc} panel-toggle launcher"
         "super, F, fullscreen"
-        "super, escape, exec, ${ipc} lockScreen lock"
+        "super, escape, exec, ${ipc} session lock"
         "super, B, exec, brave"
         "super SHIFT, S, exec, hyprshot -m region --clipboard-only"
         "super, S, exec, hyprshot -m region"
@@ -111,12 +112,12 @@ in
         "super SHIFT, 9, movetoworkspace, 9"
         "super SHIFT, 0, movetoworkspace, 10"
 
-        ",XF86AudioRaiseVolume, exec, ${ipc} volume increase"
-        ",XF86AudioLowerVolume, exec, ${ipc} volume decrease"
-        ",XF86AudioMute, exec, ${ipc} volume muteOutput"
-        ",XF86AudioMicMute, exec, ${ipc} volume muteInput"
-        ",XF86MonBrightnessUp, exec, ${ipc} brightness increase"
-        ",XF86MonBrightnessDown, exec, ${ipc} brightness decrease"
+        ",XF86AudioRaiseVolume, exec, ${ipc} volume up"
+        ",XF86AudioLowerVolume, exec, ${ipc} volume down"
+        ",XF86AudioMute, exec, ${ipc} volume mute"
+        ",XF86AudioMicMute, exec, ${ipc} mic-mute"
+        ",XF86MonBrightnessUp, exec, ${ipc} brightness up"
+        ",XF86MonBrightnessDown, exec, ${ipc} brightness down * 5%"
 
         #"super, "
         #"super,"

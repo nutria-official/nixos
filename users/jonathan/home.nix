@@ -1,50 +1,59 @@
 {
   config,
   pkgs,
-  inputs,
   home-manager,
   nvf,
   sops-nix,
-  zen-browser,
+  #zen-browser,
+  system,
+  self,
   ...
 }:
+
+let 
+ with_pkgs = with pkgs; [
+   arduino-ide
+   brave
+   cinny-desktop
+   distrobox
+   fastfetch
+   gdb
+   hyprpicker
+   musescore
+   mullvad-browser
+   nitrokey-app2
+   noisetorch
+   onlyoffice-desktopeditors
+   opentabletdriver
+   osu-lazer-bin
+   prismlauncher
+   proton-vpn
+   signal-desktop
+   steam-run
+   tigervnc
+   trash-cli
+   veracrypt
+   vlc
+   winboat
+ ];
+
+ other_pkgs = [
+ ];
+in
 
 {
   imports = [
     ../../modules/home-manager/default.nix
     ../../secrets/sops-home.nix
     ../../modules/home-manager/zsh/zsh.nix
-    zen-browser.homeModules.twilight
+    #zen-browser.homeModules.twilight
   ];
 
   home = {
     username = "jonathan";
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
-    packages = with pkgs; [
-      arduino-ide
-      brave
-      cinny-desktop
-      distrobox
-      fastfetch
-      gdb
-      hyprpicker
-      musescore
-      mullvad-browser
-      nitrokey-app2
-      noisetorch
-      onlyoffice-desktopeditors
-      opentabletdriver
-      osu-lazer-bin
-      prismlauncher
-      proton-vpn
-      signal-desktop
-      steam-run
-      tigervnc
-      veracrypt
-      vlc
-      winboat
-    ];
+    packages = with_pkgs ++ other_pkgs;
   };
   services = {
     ssh-agent = {
@@ -70,8 +79,8 @@
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
-    zen-browser = {
-      enable = true;
-    };
+    # zen-browser = {
+    #  enable = true;
+    #};
   };
 }
