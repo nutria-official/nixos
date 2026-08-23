@@ -117,7 +117,7 @@ in
         ",XF86AudioMute, exec, ${ipc} volume-mute"
         ",XF86AudioMicMute, exec, ${ipc} mic-mute"
         ",XF86MonBrightnessUp, exec, ${ipc} brightness-up"
-        ",XF86MonBrightnessDown, exec, ${ipc} brightness-down * 5%"
+        ",XF86MonBrightnessDown, exec, ${ipc} brightness-down"
 
         #"super, "
         #"super,"
