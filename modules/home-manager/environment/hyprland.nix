@@ -112,12 +112,12 @@ in
         "super SHIFT, 9, movetoworkspace, 9"
         "super SHIFT, 0, movetoworkspace, 10"
 
-        ",XF86AudioRaiseVolume, exec, ${ipc} volume up"
-        ",XF86AudioLowerVolume, exec, ${ipc} volume down"
-        ",XF86AudioMute, exec, ${ipc} volume mute"
+        ",XF86AudioRaiseVolume, exec, ${ipc} volume-up"
+        ",XF86AudioLowerVolume, exec, ${ipc} volume-down"
+        ",XF86AudioMute, exec, ${ipc} volume-mute"
         ",XF86AudioMicMute, exec, ${ipc} mic-mute"
-        ",XF86MonBrightnessUp, exec, ${ipc} brightness up"
-        ",XF86MonBrightnessDown, exec, ${ipc} brightness down * 5%"
+        ",XF86MonBrightnessUp, exec, ${ipc} brightness-up"
+        ",XF86MonBrightnessDown, exec, ${ipc} brightness-down * 5%"
 
         #"super, "
         #"super,"
