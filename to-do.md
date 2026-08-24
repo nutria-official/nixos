@@ -10,4 +10,5 @@
 21. Yazi vfs.
 22. Replace all RSA keys with post quantum algorithms.
 23. Make zsh work in nix-shells.
+24. Lanzaboot
 
