@@ -14,6 +14,7 @@ in
     settings = {
       "exec-once" = [
         "noctalia"
+        "protonvpn-app"
       ];
       "monitor" = [ 
         "HDMI-A-3, 2560x1440@144, 0x0, 1" 
