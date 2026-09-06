@@ -2,7 +2,6 @@
 1. Add impermanence.
 3. Add disko - only impermanence
 11. Configure zsh.
-12. VI-bindings in terminal.
 14. Librewolf configuration.
 15. Windows user configuration
 16. Github private key declarative
@@ -11,4 +10,3 @@
 22. Replace all RSA keys with post quantum algorithms.
 23. Make zsh work in nix-shells.
 24. Lanzaboot
-

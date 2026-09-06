@@ -79,6 +79,13 @@ in
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
+    vscode = {
+      enable = true;
+      profiles.default.extensions = with pkgs.vscode-extensions; [
+        astro-build.astro-vscode
+        vscodevim.vim
+      ];
+    };
     # zen-browser = {
     #  enable = true;
     #};

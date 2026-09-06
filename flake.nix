@@ -21,6 +21,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    holesail = {
+     url = "github:jjacke13/holesail-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #zen-browser = {
     #  url = "github:0xc000022070/zen-browser-flake";
     #  inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +44,7 @@
       noctalia,
     #zen-browser,
       disko,
+      holesail,
       ...
     }:
     let
@@ -51,6 +56,7 @@
         nvf.nixosModules.default
         sops-nix.nixosModules.sops
         disko.nixosModules.disko
+        holesail.nixosModules.x86_64-linux.holesail
         {
           home-manager = {
             sharedModules = [

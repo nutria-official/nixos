@@ -4,6 +4,11 @@
   inputs,
   ...
 }:
+
+let
+  ssh_port = 2307;
+in
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -14,6 +19,7 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
+      "uinput" # For sunshine.
     ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBMTandOAfqY3qomHdTmHSgWz7mM2I2X/HaB28Eo7hKj jonathan@laptop"
@@ -24,16 +30,33 @@
     fail2ban = {
       enable = true;
     };
+    holesail-server.holesail-ssh = {
+        enable = true;
+        port = ssh_port;
+        implementation = "js";
+        # key = ""; set up with sops after first use 
+        public = false;
+        user = "server";
+        group = "wheel";
+        log = false;
+    };
     openssh = {
       enable = true;
-      ports = [ 2307 ];
+      ports = [ ssh_port ];
       settings = {
         PermitRootLogin = "no";
         PasswordAuthentication = false;
       };
     };
+    sunshine = { # Acces port: 47989, webGUI port: 47990
+      enable = true;
+      autoStart = true;
+      capSysAdmin = true;
+    };
   };
 
-  networking.firewall.allowedTCPPorts = [ 2307 ];
-  networking.firewall.allowedUDPPorts = [ ];
+  hardware.uinput.enable = true; # For sunshine.
+
+  #networking.firewall.allowedTCPPorts = [ ssh_port ]; Might not need this cause just forwarding a port.
+  #networking.firewall.allowedUDPPorts = [ ];
 }

@@ -94,6 +94,12 @@
         enable = true;
       };
     };
+    #caddy = {
+    #  enable = true;
+    #  virtualHosts."http://localhost:5900".extraConfig = ''
+    #    respond "<h1>Hello, World!</h1>"
+    #  '';
+    #};
 
     tuned.enable = true;
     upower.enable = true;
