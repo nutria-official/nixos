@@ -19,6 +19,7 @@ let
    fastfetch
    gdb
    hyprpicker
+   moonlight-qt
    musescore
    mullvad-browser
    nitrokey-app2
