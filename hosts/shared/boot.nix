@@ -9,8 +9,6 @@
       autoGenerateKeys.enable = true;
       autoEnrollKeys = {
         enable = true;
-        includeMicrosoftKeys = false;
-        allowBrickingMyMachine = true;
       };
     };
     loader = {

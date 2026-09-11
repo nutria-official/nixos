@@ -14,6 +14,11 @@ in
   ];
   hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
 
+  boot.lanzaboote.autoEnrollKeys = {
+    includeMicrosoftKeys = false;
+    allowBrickingMyMachine = true;
+  };
+
   users.users.server = {
     isNormalUser = true;
     extraGroups = [
