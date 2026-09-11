@@ -1,7 +1,6 @@
 {
-  config,
   pkgs,
-  inputs,
+  lib,
   ...
 }:
 
@@ -30,7 +29,8 @@ in
     fail2ban = {
       enable = true;
     };
-    holesail-server.holesail-ssh = {
+    holesail-server = {
+      holesail-ssh = {
         enable = true;
         port = ssh_port;
         implementation = "js";
@@ -39,6 +39,7 @@ in
         user = "server";
         group = "wheel";
         log = false;
+      };
     };
     openssh = {
       enable = true;
@@ -52,6 +53,11 @@ in
       enable = true;
       autoStart = true;
       capSysAdmin = true;
+    };
+    btrfs.autoScrub = {
+      enable = true;
+      interval = "monthly";
+      fileSystems = [ "/" ];
     };
   };
 

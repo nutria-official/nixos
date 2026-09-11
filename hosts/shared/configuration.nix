@@ -33,13 +33,6 @@
         "wireshark"
       ];
     };
-    windows = {
-      isNormalUser = true;
-      hashedPasswordFile = config.sops.secrets."hashedPassword/windows".path;
-      extraGroups = [
-        "docker"
-      ];
-    };
   };
   nix = {
     settings = {
@@ -47,14 +40,6 @@
         "nix-command"
         "flakes"
       ];
-    };
-  };
-  virtualisation = {
-    docker = {
-      enable = true;
-    };
-    spiceUSBRedirection = {
-      enable = true;
     };
   };
 

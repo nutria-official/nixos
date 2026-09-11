@@ -12,9 +12,6 @@
       "hashedPassword/jonathan" = {
         neededForUsers = true;
       };
-      "hashedPassword/windows" = {
-        neededForUsers = true;
-      };
     };
   };
 }

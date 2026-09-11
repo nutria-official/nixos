@@ -3,7 +3,6 @@
 3. Add disko - only impermanence
 11. Configure zsh.
 14. Librewolf configuration.
-15. Windows user configuration
 16. Github private key declarative
 19. Devenv.sh
 21. Yazi vfs.

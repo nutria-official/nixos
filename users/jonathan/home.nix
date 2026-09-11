@@ -1,67 +1,48 @@
 {
-  config,
   pkgs,
-  home-manager,
-  nvf,
-  sops-nix,
-  #zen-browser,
-  system,
-  self,
   ...
 }:
-
-let 
- with_pkgs = with pkgs; [
-   arduino-ide
-   brave
-   cinny-desktop
-   distrobox
-   fastfetch
-   gdb
-   hyprpicker
-   moonlight-qt
-   musescore
-   mullvad-browser
-   nitrokey-app2
-   noisetorch
-   onlyoffice-desktopeditors
-   opentabletdriver
-   osu-lazer-bin
-   prismlauncher
-   proton-vpn
-   signal-desktop
-   steam-run
-   tigervnc
-   trash-cli
-   veracrypt
-   vlc
-   winboat
- ];
-
- other_pkgs = [
- ];
-in
 
 {
   imports = [
     ../../modules/home-manager/default.nix
     ../../secrets/sops-home.nix
     ../../modules/home-manager/zsh/zsh.nix
-    #zen-browser.homeModules.twilight
   ];
 
   home = {
     username = "jonathan";
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
-    packages = with_pkgs ++ other_pkgs;
+    packages = with pkgs; [
+      arduino-ide
+      brave
+      cinny-desktop
+      fastfetch
+      hyprpicker
+      moonlight-qt
+      musescore
+      mullvad-browser
+      nitrokey-app2
+      noisetorch
+      onlyoffice-desktopeditors
+      opentabletdriver
+      osu-lazer-bin
+      prismlauncher
+      proton-vpn
+      signal-desktop
+      steam-run
+      trash-cli
+      veracrypt
+      vlc
+      winboat
+    ];
   };
   services = {
     ssh-agent = {
       enable = true;
     };
   };
-
   programs = {
     git = {
       enable = true;
@@ -80,15 +61,5 @@ in
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
-    vscode = {
-      enable = true;
-      profiles.default.extensions = with pkgs.vscode-extensions; [
-        astro-build.astro-vscode
-        vscodevim.vim
-      ];
-    };
-    # zen-browser = {
-    #  enable = true;
-    #};
   };
 }

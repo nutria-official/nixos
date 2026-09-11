@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   networking = {
@@ -10,14 +10,7 @@
     };
   };
   nix = {
-    gc = {
-      options = "5d";
-      automatic = true;
-      dates = "daily";
-    };
     settings = {
-      auto-optimise-store = true;
-
       substituters = [
         "https://nix-community.cachix.org"
         "https://cache.nixos.org/"
@@ -28,9 +21,6 @@
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
         "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
       ];
-
-      extra-substituters = [ "https://noctalia.cachix.org" ];
-      extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
     };
   };
   time = {
@@ -73,6 +63,7 @@
     upower = {
       enable = true;
     };
+    fwupd.enable = true;
   };
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";

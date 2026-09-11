@@ -25,12 +25,12 @@
      url = "github:jjacke13/holesail-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #zen-browser = {
-    #  url = "github:0xc000022070/zen-browser-flake";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
     disko = {
       url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -42,9 +42,9 @@
       home-manager,
       sops-nix,
       noctalia,
-    #zen-browser,
       disko,
       holesail,
+      lanzaboote,
       ...
     }:
     let
@@ -57,6 +57,7 @@
         sops-nix.nixosModules.sops
         disko.nixosModules.disko
         holesail.nixosModules.x86_64-linux.holesail
+        lanzaboote.nixosModules.lanzaboote
         {
           home-manager = {
             sharedModules = [
@@ -67,16 +68,12 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.jonathan = ./users/jonathan/home.nix;
-            users.windows = ./users/windows/home.nix;
             extraSpecialArgs = {
               inherit system;
               inherit inputs;
             };
           };
         }
-      ];
-      sharedDesktopModules = [
-        ./hosts/sharedDesktop/configuration.nix
       ];
     in
     {
@@ -85,25 +82,12 @@
           inherit system;
           modules = sharedModules ++ [
             ./hosts/laptop/configuration.nix
-            #./hosts/laptop/disko.nix
           ];
         };
-        desktop-mom = nixosSystem {
+        server = nixosSystem {
           inherit system;
-          modules =
-            sharedModules
-            ++ sharedDesktopModules
-            ++ [
-              ./hosts/desktop-mom/configuration.nix
-            ];
-        };
-        desktop-dad = nixosSystem {
-          inherit system;
-          modules =
-            sharedModules
-            ++ sharedDesktopModules
-            ++ [
-              ./hosts/desktop-dad/configuration.nix
+          modules = sharedModules ++ [
+              ./hosts/server/configuration.nix
             ];
         };
       };
