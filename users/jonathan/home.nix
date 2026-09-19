@@ -1,5 +1,7 @@
 {
   pkgs,
+  inputs,
+  system,
   ...
 }:
 
@@ -36,12 +38,8 @@
       veracrypt
       vlc
       winboat
+      inputs.minesweeper.packages.${system}.minesweeper
     ];
-  };
-  services = {
-    ssh-agent = {
-      enable = true;
-    };
   };
   programs = {
     git = {
@@ -61,5 +59,6 @@
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
+    ssh.enable = true;
   };
 }
