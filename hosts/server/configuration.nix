@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   ...
 }:
 
@@ -11,6 +10,7 @@ in
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/nixos/unbound.nix
   ];
   hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
 

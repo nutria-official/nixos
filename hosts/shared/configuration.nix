@@ -9,7 +9,6 @@
   imports = [
     ./boot.nix
     ./systemSettings.nix
-    ../../modules/nixos/noisetorch.nix
     ../../secrets/sops.nix
   ];
 
@@ -41,9 +40,6 @@
   };
 
   programs = {
-    hyprland = {
-      enable = true;
-    };
     steam = {
       enable = true;
     };
