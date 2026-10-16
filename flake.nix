@@ -33,10 +33,6 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    minesweeper = {
-      url = "github:jonasskounielsen/nixos";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -49,7 +45,6 @@
       disko,
       holesail,
       lanzaboote,
-      minesweeper,
       ...
     }:
     let

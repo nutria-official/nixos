@@ -1,7 +1,5 @@
 {
   pkgs,
-  inputs,
-  system,
   ...
 }:
 
@@ -32,13 +30,15 @@
       osu-lazer-bin
       prismlauncher
       proton-vpn
+      proton-authenticator
+      proton-pass
+      protonmail-desktop
       signal-desktop
       steam-run
       trash-cli
       veracrypt
       vlc
       winboat
-      inputs.minesweeper.packages.${system}.minesweeper
     ];
   };
   programs = {
@@ -60,5 +60,10 @@
       settings = import ../../modules/home-manager/nvf.nix;
     };
     ssh.enable = true;
+  };
+  services = {
+    proton-pass-agent = {
+      enable = true;
+    };
   };
 }
