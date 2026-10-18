@@ -15,16 +15,11 @@
     homeDirectory = "/home/jonathan";
     stateVersion = "25.05";
     packages = with pkgs; [
-      arduino-ide
-      brave
       cinny-desktop
-      fastfetch
       hyprpicker
       moonlight-qt
-      musescore
       mullvad-browser
       nitrokey-app2
-      noisetorch
       onlyoffice-desktopeditors
       opentabletdriver
       osu-lazer-bin
@@ -34,7 +29,7 @@
       proton-pass
       protonmail-desktop
       signal-desktop
-      steam-run
+      tor-browser
       trash-cli
       veracrypt
       vlc
@@ -52,14 +47,10 @@
       enable = true;
       saveLocation = "$HOME/Pictures/screenshots/";
     };
-    librewolf = {
-      enable = true;
-    };
     nvf = {
       enable = true;
       settings = import ../../modules/home-manager/nvf.nix;
     };
-    ssh.enable = true;
   };
   services = {
     proton-pass-agent = {

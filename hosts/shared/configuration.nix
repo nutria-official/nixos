@@ -19,7 +19,6 @@
 
   users.users = {
     root.hashedPasswordFile = config.sops.secrets."hashedPassword/root".path;
-
     jonathan = {
       group = "wheel";
       hashedPasswordFile = config.sops.secrets."hashedPassword/jonathan".path;
@@ -56,6 +55,9 @@
     zsh = {
       enable = true;
     };
+    seahorse = {
+      enable = true;
+    };
   };
 
   hardware = {
@@ -71,24 +73,8 @@
   };
 
   services = {
-    displayManager.ly = {
-      enable = true;
-    };
-    gnome = {
-      gnome-keyring = {
-        enable = true;
-      };
-    };
-    #caddy = {
-    #  enable = true;
-    #  virtualHosts."http://localhost:5900".extraConfig = ''
-    #    respond "<h1>Hello, World!</h1>"
-    #  '';
-    #};
-
     tuned.enable = true;
     upower.enable = true;
-
     keyd = {
       enable = true;
       keyboards = import ../../modules/nixos/keyd.nix;
@@ -111,7 +97,6 @@
       nerd-fonts.symbols-only
     ];
   };
-
   xdg = {
     portal = {
       enable = true;

@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   networking = {
@@ -40,19 +40,20 @@
     rtkit = {
       enable = true;
     };
+    pam.services = {
+      login.oo7.enable = true;
+    };
   };
 
   services = {
     printing = {
       enable = true;
     };
-
     pipewire = {
       enable = true;
       wireplumber = {
         enable = true;
       };
-
       pulse = {
         enable = true;
       };
@@ -64,6 +65,10 @@
       enable = true;
     };
     fwupd.enable = true;
+    oo7.enable = true;
+    gnome = {
+      gnome-keyring.enable = lib.mkForce false;
+    };
   };
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";

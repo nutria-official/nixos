@@ -75,7 +75,7 @@ in
         "super, R, exec, ${ipc} panel-toggle launcher"
         "super, F, fullscreen"
         "super, escape, exec, ${ipc} session lock"
-        "super, B, exec, brave"
+        "super, B, exec, firefox"
         "super SHIFT, S, exec, hyprshot -m region --clipboard-only"
         "super, S, exec, hyprshot -m region"
         "super SHIFT, P, exec, hyprpicker"
