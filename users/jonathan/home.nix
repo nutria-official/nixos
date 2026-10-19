@@ -30,7 +30,6 @@
       trash-cli
       veracrypt
       vlc
-      winboat
     ];
   };
   programs = {

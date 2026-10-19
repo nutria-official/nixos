@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }:
 
@@ -12,7 +11,6 @@
     ./systemSettings.nix
     ../../modules/nixos/noisetorch.nix
     ../../secrets/sops.nix
-    #../../modules/nixos/cloudflare.nix
   ];
 
   users.mutableUsers = false; # So sops can generate userpasswords.
@@ -107,8 +105,6 @@
       allowUnfree = true;
     };
   };
-
-  nixpkgs.config.permittedInsecurePackages = [ "electron-40.10.5" ]; # For winboat to work. 2026-08-11.
 
   networking.networkmanager.enable = true;
 
