@@ -28,6 +28,7 @@
       signal-desktop
       tor-browser
       trash-cli
+      typst
       veracrypt
       vlc
     ];
