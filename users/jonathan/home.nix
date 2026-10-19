@@ -32,6 +32,9 @@
       veracrypt
       vlc
     ];
+    sessionVariables = {
+      PROTON_PASS_LINUX_KEYRING="dbus";
+    };
   };
   programs = {
     git = {
@@ -50,11 +53,12 @@
     };
   };
   services = {
+    kdeconnect = {
+      enable = true;
+      indicator = true;
+    };
     proton-pass-agent = {
       enable = true;
     };
-  };
-  home.sessionVariables = {
-    PROTON_PASS_LINUX_KEYRING="dbus";
   };
 }
