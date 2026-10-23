@@ -6,7 +6,10 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      "maple" = "steam-run ~/school/applications/maple/bin/xmaple";
+      "silde" = ''
+        PORT=$(curl -sS silde.dk/api/port)
+        kitten ssh -p $PORT silde@ssh.silde.dk
+      '';
     };
 
     initContent = ''
