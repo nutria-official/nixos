@@ -13,6 +13,7 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       cinny-desktop
+      comma
       hyprpicker
       moonlight-qt
       mullvad-browser
