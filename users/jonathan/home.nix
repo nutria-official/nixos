@@ -24,6 +24,7 @@
       proton-pass
       protonmail-desktop
       signal-desktop
+      standardnotes
       tor-browser
       trash-cli
       typst
