@@ -4,7 +4,6 @@
   imports = [
     ../../modules/home-manager/default.nix
     ../../secrets/sops-home.nix
-    ../../modules/home-manager/zsh/zsh.nix
   ];
 
   home = {
@@ -14,9 +13,7 @@
     packages = with pkgs; [
       cinny-desktop
       comma
-      hyprpicker
       moonlight-qt
-      mullvad-browser
       nitrokey-app2
       onlyoffice-desktopeditors
       opentabletdriver
@@ -43,10 +40,6 @@
     };
     home-manager = {
       enable = true;
-    };
-    hyprshot = {
-      enable = true;
-      saveLocation = "$HOME/Pictures/screenshots/";
     };
     nvf = {
       enable = true;

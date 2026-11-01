@@ -13,6 +13,10 @@
      url = "github:noctalia-dev/noctalia/cachix";
       #inputs.nixpkgs.follows = "nixpkgs"; # Disabled for cachix to work.
     };
+    mango = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nvf = {
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +45,7 @@
       nvf,
       home-manager,
       sops-nix,
+      mango,
       noctalia,
       disko,
       holesail,
@@ -64,6 +69,7 @@
               sops-nix.homeManagerModules.sops
               nvf.homeManagerModules.default
               noctalia.homeModules.default
+              mango.hmModules.mango
             ];
             useGlobalPkgs = true;
             useUserPackages = true;
