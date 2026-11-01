@@ -35,6 +35,10 @@
         "id:*,layout_name:scroller"
       ];
 
+      window_rule = [
+        "title:kitty,scroller_proportion:0.5"
+      ];
+
       key_mode = let ipc = "noctalia msg"; in {
         default.bind = [
           "SUPER,R,spawn,${ipc} panel-toggle launcher"
@@ -43,9 +47,35 @@
           "SUPER,C,killclient"
           "SUPER+SHIFT,C,killclient,force"
           "SUPER,V,togglefloating"
-          "SUPER,F,togglefullscreen"
-          "SUPER+SHIFT,F,togglemaximizescreen"
+          "SUPER+SHIFT,F,togglefullscreen"
+          "SUPER,F,togglemaximizescreen"
           "SUPER+SHIFT,R,reload_config"
+
+          "SUPER,H,focusdir,left"
+          "SUPER,L,focusdir,right"
+
+          "SUPER+SHIFT,H,exchange_client,left"
+          "SUPER+SHIFT,L,exchange_client,right"
+
+          "SUPER,1,view,1"
+          "SUPER,2,view,2"
+          "SUPER,3,view,3"
+          "SUPER,4,view,4"
+          "SUPER,5,view,5"
+          "SUPER,6,view,6"
+          "SUPER,7,view,7"
+          "SUPER,8,view,8"
+          "SUPER,9,view,9"
+
+          "SUPER+SHIFT,1,tag,1"
+          "SUPER+SHIFT,2,tag,2"
+          "SUPER+SHIFT,3,tag,3"
+          "SUPER+SHIFT,4,tag,4"
+          "SUPER+SHIFT,5,tag,5"
+          "SUPER+SHIFT,6,tag,6"
+          "SUPER+SHIFT,7,tag,7"
+          "SUPER+SHIFT,8,tag,8"
+          "SUPER+SHIFT,9,tag,9"
 
           "SUPER,S,spawn,${ipc} screenshot-region"
           "SUPER+SHIFT,S,spawn,${ipc} screenshot-annotate"
@@ -63,17 +93,12 @@
         window_manipulation.bind = [
           "NONE,Escape,setkeymode,default"
           "NONE,C,centerwin"
-          "SHIFT,H,exchange_client,left"
-          "SHIFT,L,exchange_client,right"
 
           "NONE,5,set_proportion,0.2"
           "NONE,4,set_proportion,0.25"
           "NONE,3,set_proportion,0.33"
           "NONE,2,set_proportion,0.5"
           "NONE,1,set_proportion,0.9"
-
-          "NONE,H,focusdir,left"
-          "NONE,L,focusdir,right"
         ];
       };
     };
