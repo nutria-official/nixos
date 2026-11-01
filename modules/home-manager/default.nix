@@ -6,5 +6,6 @@
     ./yazi.nix
     ./zsh/zsh.nix
     ./environment/mango.nix
+    ./comma.nix
   ];
 }

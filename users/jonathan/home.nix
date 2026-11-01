@@ -12,7 +12,6 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       cinny-desktop
-      comma
       moonlight-qt
       nitrokey-app2
       onlyoffice-desktopeditors
