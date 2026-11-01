@@ -24,7 +24,6 @@
           proportion_single = 1;
         };
         focus_center = 0;
-        proportion_preset = [0.25 0.33 0.5 0.67 0.9];
         ignore_proportion_single = 0;
         prefer = {
           center = 1;
@@ -67,7 +66,11 @@
           "SHIFT,H,exchange_client,left"
           "SHIFT,L,exchange_client,right"
 
-          "NONE,K,switch_proportion_preset"
+          "NONE,5,set_proportion,0.2"
+          "NONE,4,set_proportion,0.25"
+          "NONE,3,set_proportion,0.33"
+          "NONE,2,set_proportion,0.5"
+          "NONE,1,set_proportion,0.9"
 
           "NONE,H,focusdir,left"
           "NONE,L,focusdir,right"
