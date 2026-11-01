@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{configPath, pkgs, ...}:
 {
   programs.yazi = {
     enable = true;
@@ -17,7 +17,7 @@
         # chmod
         {run = "plugin chmod"; on = ["c" "m"];}
         # other
-        {run = "cd ~/nixos"; on = ["g" "n"];}
+        {run = "cd ${configPath}"; on = ["g" "n"];}
       ];
     };
   };

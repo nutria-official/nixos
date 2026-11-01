@@ -1,4 +1,4 @@
-{ host, ...}:
+{ configPath, host, ...}:
 
 {
   programs.zsh = {
@@ -14,8 +14,8 @@
         "env EDITOR=nvim VISUAL=nvim nix shell nixpkgs#neovim nixpkgs#yazi -c bash -i"
       '';
       "rebuild" = ''
-        (cd ~/nixos && git add .)
-        sudo nixos-rebuild switch --flake ~/nixos#${host}
+        (cd ${configPath} && git add .)
+        sudo nixos-rebuild switch --flake ${configPath}#${host}
       '';
     };
 

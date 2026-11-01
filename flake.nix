@@ -59,6 +59,7 @@
     }:
     let
       system = "x86_64-linux";
+      configPath = "/home/jonathan/nixos/";
       nixosSystem = nixpkgs.lib.nixosSystem;
       sharedModules = [
         ./hosts/shared/configuration.nix
@@ -80,7 +81,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.jonathan = ./users/jonathan/home.nix;
-            extraSpecialArgs = { inherit system inputs; };
+            extraSpecialArgs = { inherit configPath inputs system; };
           };
         }
       ];

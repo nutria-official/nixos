@@ -20,7 +20,7 @@
       scroller = {
         structs = 20;
         default = {
-          proportion = 0.9;
+          proportion = 0.5;
           proportion_single = 1;
         };
         focus_center = 0;
@@ -37,6 +37,7 @@
 
       window_rule = [
         "title:kitty,scroller_proportion:0.5"
+        "title:Firefox,scroller_proportion:0.9"
       ];
 
       key_mode = let ipc = "noctalia msg"; in {
@@ -77,11 +78,18 @@
           "SUPER+SHIFT,8,tag,8"
           "SUPER+SHIFT,9,tag,9"
 
+          "ALT+SHIFT,5,set_proportion,0.2"
+          "ALT+SHIFT,4,set_proportion,0.25"
+          "ALT+SHIFT,3,set_proportion,0.33"
+          "ALT+SHIFT,2,set_proportion,0.5"
+          "ALT+SHIFT,1,set_proportion,0.9"
+
           "SUPER,S,spawn,${ipc} screenshot-region"
           "SUPER+SHIFT,S,spawn,${ipc} screenshot-annotate"
 
           "ALT,Tab,togglejump"
-          "SUPER,Tab,setkeymode,window_manipulation"
+
+          "ALT+SHIFT,C,centerwin"
 
           "NONE,XF86AudioRaiseVolume,spawn,${ipc} volume-up"
           "NONE,XF86AudioLowerVolume,spawn,${ipc} volume-down"
@@ -89,16 +97,6 @@
           "NONE,XF86AudioMicMute,spawn,${ipc} mic-mute"
           "NONE,XF86MonBrightnessUp,spawn,${ipc} brightness-up"
           "NONE,XF86MonBrightnessDown,spawn,${ipc} brightness-down"
-        ];
-        window_manipulation.bind = [
-          "NONE,Escape,setkeymode,default"
-          "NONE,C,centerwin"
-
-          "NONE,5,set_proportion,0.2"
-          "NONE,4,set_proportion,0.25"
-          "NONE,3,set_proportion,0.33"
-          "NONE,2,set_proportion,0.5"
-          "NONE,1,set_proportion,0.9"
         ];
       };
     };
