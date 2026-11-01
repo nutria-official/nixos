@@ -4,3 +4,5 @@
 16. Github private key declarative
 19. Devenv.sh
 22. Replace all RSA keys with post quantum algorithms.
+23. Update yazi config
+24. Pass-cli

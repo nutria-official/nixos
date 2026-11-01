@@ -8,6 +8,7 @@
     secrets = {
       "github/name" = {};
       "github/email" = {};
+      "pass-cli-token" = {};
     };
   };
 }
