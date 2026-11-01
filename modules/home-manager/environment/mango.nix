@@ -23,16 +23,18 @@
           proportion = 0.9;
           proportion_single = 1;
         };
-        focus_center = 1;
-        proportion_preset = [0.5 0.9 1];
-        ignore_proportion_single = 1;
+        focus_center = 0;
+        proportion_preset = [0.25 0.33 0.5 0.67 0.9];
+        ignore_proportion_single = 0;
         prefer = {
-          center = 0;
+          center = 1;
           overspread = 1;
         };
       };
 
-      circle_layout = [ "scroller" ];
+      tag_rule = [
+        "id:*,layout_name:scroller"
+      ];
 
       key_mode = let ipc = "noctalia msg"; in {
         default.bind = [
@@ -64,16 +66,11 @@
           "NONE,C,centerwin"
           "SHIFT,H,exchange_client,left"
           "SHIFT,L,exchange_client,right"
-          "SHIFT,K,exchange_client,up"
-          "SHIFT,J,exchange_client,down"
 
-          "ALT,H,resizewin,-10"
-          "ALT,J,resizewin,+10"
+          "NONE,K,switch_proportion_preset"
 
           "NONE,H,focusdir,left"
           "NONE,L,focusdir,right"
-          "NONE,K,focusdir,up"
-          "NONE,J,focusdir,down"
         ];
       };
     };

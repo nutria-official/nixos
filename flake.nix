@@ -80,10 +80,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.jonathan = ./users/jonathan/home.nix;
-            extraSpecialArgs = {
-              inherit system;
-              inherit inputs;
-            };
+            extraSpecialArgs = { inherit system inputs; };
           };
         }
       ];
@@ -94,13 +91,16 @@
           inherit system;
           modules = sharedModules ++ [
             ./hosts/laptop/configuration.nix
+            { home-manager.extraSpecialArgs = { host = "laptop"; }; }
           ];
         };
         server = nixosSystem {
+          host = "server";
           inherit system;
           modules = sharedModules ++ [
-              ./hosts/server/configuration.nix
-            ];
+            ./hosts/server/configuration.nix
+            { home-manager.extraSpecialArgs = { host = "server"; }; }
+          ];
         };
       };
     };

@@ -1,3 +1,5 @@
+{ host, ...}:
+
 {
   programs.zsh = {
     enable = true;
@@ -10,6 +12,10 @@
         PORT=$(curl -sS silde.dk/api/port)
         kitten ssh -p $PORT silde@ssh.silde.dk -t \
         "env EDITOR=nvim VISUAL=nvim nix shell nixpkgs#neovim nixpkgs#yazi -c bash -i"
+      '';
+      "rebuild" = ''
+        (cd ~/nixos && git add .)
+        sudo nixos-rebuild switch --flake ~/nixos#${host}
       '';
     };
 
