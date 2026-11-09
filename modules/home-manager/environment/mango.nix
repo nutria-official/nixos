@@ -10,7 +10,7 @@
     settings = {
       xkb_rules_layout = "dk";
       mouse_accel_profile = 0;
-      mouse_natural_scrolling = 1;
+      mouse_natural_scrolling = 0;
       trackpad_accel_profile = 2;
       trackpad_natural_scrolling = 1;
 

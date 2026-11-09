@@ -96,7 +96,6 @@
           ];
         };
         server = nixosSystem {
-          host = "server";
           inherit system;
           modules = sharedModules ++ [
             ./hosts/server/configuration.nix

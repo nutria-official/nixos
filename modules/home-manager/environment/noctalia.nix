@@ -1,4 +1,4 @@
-{lib, ...}:
+{ ... }:
 
 # Comes from noctalia-shell flake.
 # Documentation: https://docs.noctalia.dev/ 
@@ -10,6 +10,6 @@
 
   programs.noctalia = {
     enable = true;
-    #settings = fromTOML (builtins.readFile ./noctalia.toml);
+    #settings = fromTOML (builtins.readFile ./noctralia.toml);
   };
 }
