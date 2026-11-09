@@ -278,6 +278,7 @@
       };
       PostQuantumKeyAgreementEnabled = true;
       Preferences = {
+        "privacy.resistFingerprinting"  = true;
         "privacy.fingerprintingProtection" = true;
       };
       PrimaryPassword = false;
