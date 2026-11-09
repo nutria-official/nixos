@@ -3,9 +3,22 @@
   programs.yazi = {
     enable = true;
     shellWrapperName = "yy";
-    plugins = {
-      bookmarks = pkgs.yaziPlugins.bookmarks;
-      chmod = pkgs.yaziPlugins.chmod;
+    plugins = with pkgs.yaziPlugins; {
+      bookmarks = {
+        package = bookmarks;
+        setup = true;
+        settings = {
+          last_directory.enable = false;
+          persist = "vim";
+          desc_format = "full";
+          file_pick_mode = "hover";
+          notify.enable = false;
+          custom_desc_input = true;
+          show_keys = true;
+        };
+      };
+      chmod = chmod;
+      compress = compress;
     };
     keymap = {
       mgr.prepend_keymap = [
