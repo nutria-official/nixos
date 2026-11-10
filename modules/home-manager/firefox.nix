@@ -277,10 +277,7 @@
         Locked = true;
       };
       PostQuantumKeyAgreementEnabled = true;
-      Preferences = {
-        "privacy.resistFingerprinting"  = true;
-        "privacy.fingerprintingProtection" = true;
-      };
+      Preferences = {};
       PrimaryPassword = false;
       PrintingEnabled = true;
       PrivateBrowsingModeAvailability = 0;
@@ -392,6 +389,9 @@
         name = "default";
         path = "default";
         id = 0;
+        settings = {
+          "privacy.resistFingerprinting"  = true;
+        };
         search = {
           force = true;
           engines = {
@@ -454,16 +454,6 @@
            };
           };
         };
-      };
-      school = {
-        name = "school";
-        path = "school";
-        id = 1;
-        };
-      other = {
-        name = "other";
-        path = "other";
-        id = 2;
       };
     };
   };
