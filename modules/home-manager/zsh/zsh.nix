@@ -18,6 +18,7 @@
         sudo nixos-rebuild switch --flake ${configPath}#${host}
       '';
       "pl" = ''
+        pass-cli logout --force
         pass-cli login --pat $(cat ${config.sops.secrets."pass-cli-token".path})
         pass-cli ssh-agent daemon start
         export SSH_AUTH_SOCK=/home/jonathan/.ssh/proton-pass-agent.sock
