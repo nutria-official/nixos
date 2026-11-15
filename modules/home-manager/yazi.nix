@@ -23,14 +23,17 @@
     keymap = {
       mgr.prepend_keymap = [
         # bookmarks
-        {run = "plugin bookmarks save";       on = ["b" "s"];}
-        {run = "plugin bookmarks jump";       on = ["g" "b"];}
-        {run = "plugin bookmarks delete";     on = ["b" "d"];}
-        {run = "plugin bookmarks delete_all"; on = ["b" "D"];}
+        {run = "plugin bookmarks save";       on = ["b" "s"]; desc = "Bookmark: save";}
+        {run = "plugin bookmarks jump";       on = ["g" "b"]; desc = "Bookmark: jump";}
+        {run = "plugin bookmarks delete";     on = ["b" "d"]; desc = "Bookmark: delete";}
+        {run = "plugin bookmarks delete_all"; on = ["b" "D"]; desc = "Bookmark: delete all";}
         # chmod
-        {run = "plugin chmod"; on = ["c" "m"];}
+        {run = "plugin chmod"; on = ["c" "m"]; desc = "chmod";}
+        # compress
+        {run = "plugin compress -l"; on = ["c" "a" "l"]; desc = "Compress: level";}
+        {run = "plugin compress -phl"; on = ["c" "a" "e"]; desc = "Compress: encrypt";}
         # other
-        {run = "cd ${configPath}"; on = ["g" "n"];}
+        {run = "cd ${configPath}"; on = ["g" "n"]; desc = "Go: nixos dir";}
       ];
     };
   };
