@@ -22,6 +22,7 @@
       proton-authenticator
       proton-pass
       protonmail-desktop
+      p7zip
       signal-desktop
       standardnotes
       tor-browser
