@@ -12,6 +12,8 @@
         j = "down";
         k = "up";
         l = "right";
+        "space" = "enter";
+        d = "backspace";
       };
     };
   };
