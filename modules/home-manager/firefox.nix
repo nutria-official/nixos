@@ -1,4 +1,4 @@
-{ pkgs, config, ...}:
+{ host, pkgs, config, ...}:
 
 
 # Reference: https://firefox-admin-docs.mozilla.org/reference/policies/
@@ -130,8 +130,8 @@
       DisplayBookmarksToolbar = "always";
       DisplayMenuBar = "default-off";
       DNSOverHTTPS = {
-        Enabled = false;
-        #ProviderURL = "https://dns.quad9.net/dns-query";
+        Enabled = if (host == "server") then false else true;
+        ProviderURL = if (host == "laptop") then "https://dns.quad9.net/dns-query" else "";
         Locked = true;
         Fallback = true;
       };
