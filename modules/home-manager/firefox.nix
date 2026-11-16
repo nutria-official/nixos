@@ -370,6 +370,7 @@
         settings = {
           "privacy.resistFingerprinting"  = true;
           "privacy.resistFingerprinting.letterboxing" = true;
+          "browser.ml.chat.hideLocalhost" = false;
         };
         search = {
           force = true;
