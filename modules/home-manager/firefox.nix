@@ -82,33 +82,10 @@
         SiteSettings = true;
         Exceptions = [
           "https://proton.me"
+          "https://github.com"
         ];
       };
       CNSA2KeyAgreementEnabled = false;
-      Containers = {
-        Default = [
-          {
-            name = "Login";
-            icon = "fingerprint";
-            color = "violet";
-          }
-          {
-            name = "Entertainment";
-            icon = "vacation";
-            color = "yellow";
-          }
-          {
-            name = "Google";
-            color = "red";
-            icon = "briefcase";
-          }
-          {
-            name = "Microsoft";
-            color = "blue";
-            icon = "briefcase";
-          }
-        ];
-      };
       ContentAnalysis = {
         Enabled = false;
       };
@@ -153,9 +130,10 @@
       DisplayBookmarksToolbar = "always";
       DisplayMenuBar = "default-off";
       DNSOverHTTPS = {
-        Enabled = true;
+        Enabled = false;
+        #ProviderURL = "https://dns.quad9.net/dns-query";
         Locked = true;
-        Fallback = false;
+        Fallback = true;
       };
       DontCheckDefaultBrowser = true;
       DownloadDirectory = "${config.home.homeDirectory}/Downloads";
@@ -292,7 +270,7 @@
           Minute = 7;
         };
       };
-      RequestedLocales = [ "en-US" "da" ];
+      RequestedLocales = [ "en-US" ];
       SearchBar = "unified";
       SearchEngines = {
         Default = "ddg";
@@ -391,6 +369,7 @@
         id = 0;
         settings = {
           "privacy.resistFingerprinting"  = true;
+          "privacy.resistFingerprinting.letterboxing" = true;
         };
         search = {
           force = true;
