@@ -73,7 +73,7 @@
           home-manager = {
             sharedModules = [
               sops-nix.homeManagerModules.sops
-              nvf.homeManagerModules.default
+              nvf.homeModules.default
               noctalia.homeModules.default
               mango.hmModules.mango
               nix-index-database.homeModules.default
