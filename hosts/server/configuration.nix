@@ -11,6 +11,7 @@ in
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/unbound.nix
+    ../../modules/nixos/ollama.nix
   ];
   hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
 
