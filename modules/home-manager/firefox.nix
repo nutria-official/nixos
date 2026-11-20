@@ -273,7 +273,7 @@
       RequestedLocales = [ "en-US" ];
       SearchBar = "unified";
       SearchEngines = {
-        Default = "ddg";
+        Default = if (host == "server") then "searxng" else "ddg";
         PreventInstalls = true;
         Remove = [ "Google" "Bing" "Perplexity"];
       };
@@ -375,6 +375,19 @@
         search = {
           force = true;
           engines = {
+            "searxng" = {
+              urls = [
+                {
+                  template = "http://localhost:33478/search";
+                  params = [
+                    { name = "q"; value = "{searchTerms}"; }
+                  ];
+                }
+              ];
+              icon = "${pkgs.searxng}/share/static/themes/simple/img/favicon.svg";
+              definedAliases = [ "sx" ];
+            };
+
             "Nix Packages" = {
               urls = [
                 {

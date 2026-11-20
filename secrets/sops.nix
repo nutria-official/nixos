@@ -12,6 +12,7 @@
       "hashedPassword/jonathan" = {
         neededForUsers = true;
       };
+      "searxng_secret_key" = {};
     };
   };
 }
